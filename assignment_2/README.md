@@ -93,7 +93,7 @@ type = str
 help = string, the keyword for which you wish to find collocates and calculate metrics.
 ```
 
-_Custom filepath:_
+_Window size:_
 ```bash
 "-w", "--window_size"
 default = 2
