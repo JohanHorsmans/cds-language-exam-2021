@@ -6,7 +6,7 @@
   </a>
   
   <h1 align="center">Cultural Data Science 2021</h1> 
-  <h3 align="center">Visual Analytics Exam</h3> 
+  <h3 align="center">Language Analytics Exam</h3> 
 
 
   <p align="center">
@@ -28,10 +28,11 @@
     <li>
       <a href="#portfolio-assignments">Portfolio assignments</a>
       <ul>
-        <li><a href="#assignment-3---edge-detection">Assignment 3 - Edge detection</a></li>
-        <li><a href="#assignment-4---logistic-regression-and-neural-network-benchmark-mnist-classification">Assignment 4 - Logistic Regression and Neural Network benchmark mnist classification</a></li>
-        <li><a href="#assignment-5---cnn-classification-of-impressionist-paintings">Assignment 5 - CNN classification of impressionist paintings</a></li>
-        <li><a href="#self-assigned-project---creating-fake-monet-images-with-style-transfer-and-classifying-them-with-cnn's">Self-assigned project - Creating fake Monet-images with style transfer and classifying them with CNN's</a></li>
+        <li><a href="#assignment-2---string-processing-with-python">Assignment 2 - String Processing With Python</a></li>
+        <li><a href="#assignment-3---sentiment-analysis">Assignment 3 - Sentiment Analysis</a></li>
+        <li><a href="#assignment-4---network-analysis">Assignment 4 - Network Analysis</a></li>
+        <li><a href="#assignment-5---(un)supervised-machine-learning">Assignment 5 - (Un)supervised Machine Learning</a></li>
+        <li><a href="#self-assigned-project---hate-speech-detection">Self-assigned project - Hate Speech Detection</a></li>
       </ul>
     </li>
     <li><a href="#license">License</a></li>
@@ -94,7 +95,7 @@ Furthermore, it holds the following files:
 <!-- PORTFOLIO ASSIGNMENTS -->
 ## Portfolio assignments
 
-### Assignment 3 - Edge detection
+### Assignment 2 - String Processing With Python
 
 Go through the following steps to run assignment 3:
 ```bash
@@ -106,7 +107,19 @@ Type: ```python3 edge_detection.py -h``` for a detailed guide on how to specify 
 
 For more information, see [```assignment_3/README.md```](https://github.com/JohanHorsmans/cds-visual-exam-2021/tree/main/assignment_3)
 
-### Assignment 4 - Logistic Regression and Neural Network benchmark mnist classification
+### Assignment 3 - Sentiment Analysis
+
+Go through the following steps to run assignment 3:
+```bash
+cd {root directory (i.e. cds-visual-exam-2021}
+cd assignment_3
+python3 edge_detection.py
+```
+Type: ```python3 edge_detection.py -h``` for a detailed guide on how to specify script-parameters. 
+
+For more information, see [```assignment_3/README.md```](https://github.com/JohanHorsmans/cds-visual-exam-2021/tree/main/assignment_3)
+
+### Assignment 4 - Network Analysis
 
 Go through the following steps to run assignment 4:
 ```bash
@@ -119,7 +132,7 @@ Type: ```python3 lr-mnist.py -h``` and ```python3 nn-mnist.py -h``` for a detail
 
 For more information, see [```assignment_4/README.md```](https://github.com/JohanHorsmans/cds-visual-exam-2021/tree/main/assignment_4)
 
-### Assignment 5 - CNN classification of impressionist paintings
+### Assignment 5 - (Un)supervised Machine Learning
 
 Go through the following steps to run assignment 5:
 ```bash
