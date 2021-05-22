@@ -119,8 +119,7 @@ Furthermore, it holds the following files:
 <!-- DISCUSSION OF RESULTS -->
 ## Discussion of results
 
-I succeeded in creating a script that calculates various collocate-metrics for specific keywords and window-sizes. Furthermore, I solved the bonus assignment by making it possible to specify script-parameters from the terminal.
-
+The two plots show that the news data is generally positive (Sentiment score > 0) in spite of the fluctuations on a weekly/monthly basis. We see that the variance in sentiment scores is larger on a weekly basis than on a monthly basis, indicating that the variance seen from week to week is quite similar in both directions and thus, to a certain extent, cancels each other out when analysed on a monthly basis.
 
 <br />
 <p align="center">
