@@ -120,19 +120,7 @@ Furthermore, it holds the following files:
 <!-- DISCUSSION OF RESULTS -->
 ## Discussion of results
 
-The contours drawn on the image were quite good (see _figure 1_). Nonetheless, we can see that it has not
-succeeded in exclusively capturing the letters since it also has drawn contours on the brick-lines in the wall
-where the text is inscribed. When testing the --image_path argument, I experimented with drawing contours on
-a lot of different images where it achieved similar levels of performance. As such, I believe that my
-solution is quite robust. Furthermore, my script is fairly successful in converting the image to a string as
-seen by the following output where there are only a few errors:
-
-_"we hold these truths to be self evident that all men are created equal that they are endowed by their creator
-with certain inalienable rights among these are life liberty and the pursuit of happiness that to securethese
-rights governments are instituted among men we solemnly publish and declare that these colonies are and of
-right ought to be free and independent states and for the support of this declaration with a firm reliance on
-the protection of divine providence we mutually pledge our lives our fortunes and our sacred honour we"._
-
+I succeeded in creating a script that calculates various collocate-metrics for specific keywords and window-sizes. Furthermore, I solved the bonus assignment by making it possible to specify script-parameters from the terminal.
 
 <br />
 <p align="center">
