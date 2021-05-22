@@ -158,7 +158,7 @@ Distributed under the [Apache License 2.0](https://www.apache.org/licenses/LICEN
 ## Acknowledgements
 * [Ross Dean McLachlan](https://pure.au.dk/portal/en/persons/ross-deans-kristensenmclachlan(29ad140e-0785-4e07-bdc1-8af12f15856c).html) - Our teacher for the Visual Analytics course
 * [Emil Jessen](https://github.com/emiltj) - With whom I have collaborated in creating this README structure and brainstormed ideas for the self-assigned project.
-* * [Gustav Aarup Lauridsen](https://github.com/Guscode) - My partner for assignment 5 and the self-assigned project.
+* [Gustav Aarup Lauridsen](https://github.com/Guscode) - My partner for assignment 5 and the self-assigned project.
 
 
 <!-- CONTACT -->
