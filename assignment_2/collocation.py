@@ -26,11 +26,11 @@ import math
 # Define function argument defaults and how to specify them from the terminal:
 ap = argparse.ArgumentParser(description = "[DESCRIPTION]: A function designed to calculate collocates for a specific keyword across a text-corpus. The following argument can be specified but you can also run the code with default parameters:")
 
-ap.add_argument("-f", "--filepath", default = "data", type = str, help = "string, path to input file. Be weary of difference in operating systems in terms of spcifying path with \" / \" or \" \ \" [DEFAULT]: data/WHHT.jpg")
+ap.add_argument("-f", "--filepath", default = "data", type = str, help = "string, path to text-corpus. Texts need to be .txt-files. Be wary of difference in operating systems in terms of spcifying path with \" / \" or \" \ \" [DEFAULT]: data")
 
-ap.add_argument("-k", "--keyword", default = "california", type = str, help = "string, path to input file. Be weary of difference in operating systems in terms of spcifying path with \" / \" or \" \ \" [DEFAULT]: data/WHHT.jpg")
+ap.add_argument("-k", "--keyword", default = "california", type = str, help = "string, the keyword for which you wish to find collocates and calculate metrics. [DEFAULT]: california")
 
-ap.add_argument("-w", "--window_size", default = 2, type = int, help = "string, path to input file. Be weary of difference in operating systems in terms of spcifying path with \" / \" or \" \ \" [DEFAULT]: data/WHHT.jpg")
+ap.add_argument("-w", "--window_size", default = 2, type = int, help = "integer, collocate window-size. [DEFAULT]: 2")
 
 # Parse the arguments:
 args = vars(ap.parse_args())
@@ -50,7 +50,7 @@ def main(filepath, keyword, window_size): #Define a function with three paramete
         with open(text, "r", encoding="utf-8") as text: #open the contents of the .txt-file.
             loaded_text = text.read() #load the contents of the .txt-file.
             loaded_text = loaded_text.lower() #use the lower-method to make all letters in the text lowercase to ensure that identical words with different casing are regarded as the same word.
-            regex = re.compile('[^a-zA-Z\s]') #use regular expression to define special characters which I want to delete. \s is whitespace, a-zA-Z - matches all the letters, ^ - negates them all so it deletes everything else. This is done to ensure that, i.e., "fish." and "fish!" are recognized as identical words.
+            regex = re.compile('[^a-zA-Z\s]') #use regular expression to define special characters which I want to delete. \s is whitespace, a-zA-Z - matches all the letters, ^ - negates them all so it deletes everything else. This is done to ensure that, i.e., "fish." and "Fish!" are recognized as identical words.
             loaded_text = regex.sub('', loaded_text) #remove words defined in the above regular expression.
         t = -1 #Define indexing-variable, t, as -1
         loaded_text = loaded_text.split() #Split text into individual words.
