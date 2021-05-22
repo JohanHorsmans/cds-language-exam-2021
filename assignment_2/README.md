@@ -24,7 +24,6 @@
     <li><a href="#methods">Methods</a></li>
     <li><a href="#how-to-run">How to run</a></li>
     <li><a href="#repository-structure-and-contents">Repository structure and contents</a></li>
-    <li><a href="#data">Data</a></li>
     <li><a href="#discussion-of-results">Discussion of results</a></li>
   </ol>
 </details>
@@ -63,29 +62,45 @@ This assignment is designed to test that you have a understanding of:
 <!-- METHODS -->
 ## Methods
 
-The problem in this assignment relates to preprocessing images and then extracting specific features/edges in the image. To solve the task, I started by preprocessing the image with various cv2-functions. To find the edges, I used the _findContours_-function from cv2. As an added bonus, I also used pytesseract to convert the text in the image to a string and print the text in the terminal. To solve the bonus assignment, I used argparse to enable the user to specify arguments from the terminal. With argparse, I made it possible for the user to specify their own image path with an argument called --image_path. In the data-folder in the repository, I included an image titled "Pure_text.png" which the user can use to test the --image_path argument.
+The problem in this assignment relates to manually calculating collocates for a specific keyword and window-size in a text corpus. To solve the task i started by loading- and preprocessing the text to make it lowercase and remove all odd characters. This was done to ensure that, i.e., "fish." and "Fish!" are recognized as identical words. I then proceeded to do a series of for-loops with various steps of data-wrangling and mathematical calculatons to compute collocate-metrics for all words within the specified window-size of the keyword. Using _pandas_, the script lastly writes a csv-file containing the collocate-word, the raw frequency (i.e. O11-score) and the Mutual Information (MI) score. This csv-file is written to a folder called "out" which is also created by the script. To solve the bonus assignment, I used argparse to enable the user to specify arguments from the terminal. With argparse, I made it possible for the user to specify their own filepath, keyword and window-size with the arguments --filepath, --keyword and --window_size, respectively.
 
 <!-- HOW TO RUN -->
 ## How to run
 
-__NOTICE:__ To run the assignment, you need to have configured and activated your virtual environment. See the main [README](https://github.com/JohanHorsmans/cds-visual-exam-2021/blob/main/README.md) for a guide on how to do this.
+__NOTICE:__ To run the assignment, you need to have configured and activated your virtual environment. See the main [README](https://github.com/JohanHorsmans/cds-language-exam-2021/blob/main/README.md) for a guide on how to do this.
 
-Go through the following steps to run assignment 3:
+Go through the following steps to run assignment 2:
 ```bash
-cd {root directory (i.e. cds-visual-exam-2021}
-cd assignment_3
-python3 edge_detection.py
+cd {root directory (i.e. cds-language-exam-2021}
+cd assignment_2
+python3 collocation.py
 ```
 __You can specify the following optional argument from the terminal:__
 
-_Custom image path:_
+_Custom filepath:_
 ```bash
-"-i", "--image_path"
-default =  os.path.join("data","WHTT.jpg")
+"-f", "--filepath"
+default = "data"
 type = str
-help = string, path to input file. Be weary of difference in operating systems in terms of spcifying path with  "/" or "\".
+help = string, path to text-corpus. Texts need to be .txt-files. Be wary of difference in operating systems in terms of spcifying path with "/" or "\".
 ```
-You can also type: ```python3 edge_detection.py -h``` for a detailed guide on how to specify script-arguments. 
+
+_Keyword:_
+```bash
+"-k", "--keyword"
+default = "california"
+type = str
+help = string, the keyword for which you wish to find collocates and calculate metrics.
+```
+
+_Custom filepath:_
+```bash
+"-w", "--window_size"
+default = 2
+type = int
+help = integer, collocate window-size.
+```
+You can also type: ```python3 collocation.py -h``` for a detailed guide on how to specify script-arguments. 
 
 <!-- REPOSITORY STRUCTURE AND CONTENTS -->
 ## Repository structure and contents
@@ -94,23 +109,13 @@ This repository contains the following folders:
 
 |Folder|Description|
 |:--------|:-----------|
-```data/``` | Folder containing data for assignment 3
+```data/``` | Folder containing a dataset consisting of 100 classic English novels in .txt-format.
 
 Furthermore, it holds the following files:
 |File|Description|
 |:--------|:-----------|
-```edge_detection.py``` | The python script for the assignment
+```collocation.py``` | The python script for the assignment
 ```README.md``` | The README file that you are currently reading.
-
-<!-- DATA -->
-## Data
-
-The data-folder contains the following files:
-
-|File|Description|
-|:--------|:-----------|
-WHTT.jpg | An image of a wall with the declaration of independence inscribed. Default image for the script.
-Pure_text.png | An image with text saying "Pure Text". Can be used to test the --image_path argument in the script.
 
 <!-- DISCUSSION OF RESULTS -->
 ## Discussion of results
