@@ -61,7 +61,7 @@ This assignment is designed to test that you have a understanding of:
 <!-- METHODS -->
 ## Methods
 
-The problem in this assignment relates to manually calculating collocates for a specific keyword and window-size in a text corpus. To solve the task i started by loading- and preprocessing the text to make it lowercase and remove all odd characters. This was done to ensure that, i.e., "fish." and "Fish!" are recognized as identical words. I then proceeded to do a series of for-loops with various steps of data-wrangling and mathematical calculatons to compute collocate-metrics for all words within the specified window-size of the keyword. Using _pandas_, the script lastly writes a csv-file containing the collocate-word, the raw frequency (i.e. O11-score) and the Mutual Information (MI) score. This csv-file is written to a folder called "out" which is also created by the script. To solve the bonus assignment, I used argparse to enable the user to specify arguments from the terminal. With argparse, I made it possible for the user to specify their own filepath, keyword and window-size with the arguments --filepath, --keyword and --window_size, respectively.
+The problem of this assignment relates to mangling and processing date-time-data and calculating rolling sentiment scores for a large text corpus. I use pandas to convert the data to date-time format and arrange them in chronological order. To reduce run-time, I carry out the analysis on a subset of 100.000 randomly sampled headlnes. I use SpaCy text blob to calculate the sentiment-score for the headlines. I batch the data together with a batch-size of 500 to make the analysis run faster. I then calculate mean sentiment score for each week and month and plot the scores in two separate graphs (see _discussion of results_). Lastly, the script also writes a csv-file named _"sentiment.csv"_ with the score for each individual headline.
 
 <!-- HOW TO RUN -->
 ## How to run
@@ -71,36 +71,9 @@ __NOTICE:__ To run the assignment, you need to have configured and activated you
 Go through the following steps to run assignment 2:
 ```bash
 cd {root directory (i.e. cds-language-exam-2021}
-cd assignment_2
-python3 collocation.py
+cd assignment_3
+python3 sentiment.py
 ```
-__You can specify the following optional argument from the terminal:__
-
-_Custom filepath:_
-```bash
-"-f", "--filepath"
-default = "data"
-type = str
-help = string, path to text-corpus. Texts need to be .txt-files. Be wary of difference in operating systems in terms of spcifying path with "/" or "\".
-```
-
-_Keyword:_
-```bash
-"-k", "--keyword"
-default = "california"
-type = str
-help = string, the keyword for which you wish to find collocates and calculate metrics.
-```
-
-_Window size:_
-```bash
-"-w", "--window_size"
-default = 2
-type = int
-help = integer, collocate window-size.
-```
-You can also type: ```python3 collocation.py -h``` for a detailed guide on how to specify script-arguments. 
-
 <!-- REPOSITORY STRUCTURE AND CONTENTS -->
 ## Repository structure and contents
 
@@ -108,12 +81,12 @@ This repository contains the following folders:
 
 |Folder|Description|
 |:--------|:-----------|
-```data/``` | Folder containing a dataset consisting of 100 classic English novels in .txt-format.
+```data/``` | Folder containing a dataset consisting over a million headlines taken from the Australian news source ABC (Start Date: **2003-02-19** ; End Date: **2020-12-31**)
 
 Furthermore, it holds the following files:
 |File|Description|
 |:--------|:-----------|
-```collocation.py``` | The python script for the assignment
+```sentiment.py``` | The python script for the assignment
 ```README.md``` | The README file that you are currently reading.
 
 <!-- DISCUSSION OF RESULTS -->
