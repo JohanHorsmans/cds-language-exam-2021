@@ -122,13 +122,6 @@ Furthermore, it holds the following files:
 
 I succeeded in creating a script that calculates various collocate-metrics for specific keywords and window-sizes. Furthermore, I solved the bonus assignment by making it possible to specify script-parameters from the terminal.
 
-<br />
-<p align="center">
-  <a href="https://github.com/JohanHorsmans/cds-visual-exam-2021">
-    <img src="../README_images/image_letters.jpg" alt="Logo">
-  </a>
-<p align="center">
-Figure 1: The final contours drawn on the image.
 
 <br />
 <p align="center">
