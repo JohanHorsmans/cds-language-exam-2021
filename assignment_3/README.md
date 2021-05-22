@@ -125,7 +125,7 @@ From the scripts two plots are produced. One for the weekly rolling sentiment sc
 <br />
 <p align="center">
   <a href="https://github.com/JohanHorsmans/cds-visual-exam-2021">
-    <img src="../README_images/plot2.png" alt="Weekly" width="300" height="102">
+    <img src="../README_images/plot2.png" alt="Weekly">
   </a>
   
   Figure 1: Weekly sentiment score
@@ -133,7 +133,7 @@ From the scripts two plots are produced. One for the weekly rolling sentiment sc
   <br />
 <p align="center">
   <a href="https://github.com/JohanHorsmans/cds-visual-exam-2021">
-    <img src="../README_images/plot1.png" alt="Monthly" width="300" height="102">
+    <img src="../README_images/plot1.png" alt="Monthly">
   </a>
   
     Figure 2: Monthly sentiment score
