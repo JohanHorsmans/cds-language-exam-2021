@@ -31,33 +31,32 @@
 <!-- OFFICIAL DESCRIPTION FROM INSTRUCTOR -->
 ## Official description from instructor
 
-### String processing with Python
+### Dictionary-based sentiment analysis with Python
 
-Using a text corpus found on the cds-language GitHub repo __or__ a corpus of your own found on a site such as Kaggle, write a Python script which calculates __collocates__ for a specific keyword.
+This is a dataset of over a million headlines taken from the Australian news source ABC (Start Date: **2003-02-19** ; End Date: **2020-12-31**).
 
-* The script should take a directory of text files, a keyword, and a window size (number of words) as input parameters, and an output file called out/{filename}.csv
-* These parameters can be defined in the script itself
-* Find out how often each word collocates with the target across the corpus
-* Use this to calculate mutual information between the target word and all collocates across the corpus
-* Save result as a single file consisting of three columns: collocate, raw_frequency, MI
+* Calculate the sentiment score for every headline in the data. You can do this using the spaCyTextBlob approach that we covered in class or any other dictionary-based approach in Python.
+* Create and save a plot of sentiment over time with a 1-week rolling average
+* Create and save a plot of sentiment over time with a 1-month rolling average
+* Make sure that you have clear values on the x-axis and that you include the following: a plot title; labels for the x and y axes; and a legend for the plot
+* Write a short summary (no more than a paragraph) describing what the two plots show. You should mention the following points: 1) What (if any) are the general trends? 2) What (if any) inferences might you draw from them?
 
-* __BONUS CHALLENGE:__ Use argparse to take inputs from the command line as parameters
+* __HINT:__ You'll probably want to calculate an average score for each day first, before calculating the rolling averages for weeks and months.
 
 __General instructions__
 
-* For this assignment, you should upload a standalone .py script which can be executed from the command line.
-* Save your script as collocation.py
-* Make sure to include a requirements.txt file and your data
+* For this assignment, you should upload a standalone .py script which can be executed from the command line or a Jupyter Notebook
+* Save your script as sentiment.py or sentiment.ipynb
+* Make sure to include a requirements.txt file and details about where to find the data
 * You can either upload the scripts here or push to GitHub and include a link - or both!
 * Your code should be clearly documented in a way that allows others to easily follow the structure of your script and to use them from the command line
 
 __Purpose__
-
 This assignment is designed to test that you have a understanding of:
 
-* how to structure, document, and share a Python scripts;
-* how to effectively make use of native Python packages for string processing;
-* how to extract basic linguistic information from large quantities of text, specifically in relation to a specific target keyword
+* how to perform dictionary-based sentiment analysis in Python;
+* how to effectively use pandas and spaCy in a simple NLP workflow;
+* how to present results visually, working with datetime formats to show trends over time
 
 <!-- METHODS -->
 ## Methods
