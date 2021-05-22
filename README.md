@@ -45,7 +45,7 @@
 <!-- PROJECT INFO -->
 ## Project info
 
-This repository houses the exam of _Johan Kresten Horsmans (AU ID: au618771)_ for the course [_Visual Analytics_](https://kursuskatalog.au.dk/en/course/101992/Visual-Analytics), as part of the bachelor's elective [_Cultural Data Science_](https://bachelor.au.dk/en/supplementary-subject/culturaldatascience/) at Aarhus University. The repository consists of 4 assignments: three class assignments and one self-assigned project. The following README details how to run the code and contains a thorough explanation of how the repository is structured.
+This repository houses the exam of _Johan Kresten Horsmans (AU ID: au618771)_ for the course [_Language Analytics_](https://kursuskatalog.au.dk/en/course/101990/Language-Analytics), as part of the bachelor's elective [_Cultural Data Science_](https://bachelor.au.dk/en/supplementary-subject/culturaldatascience/) at Aarhus University. The repository consists of 4 assignments: three class assignments and one self-assigned project. The following README details how to run the code and contains a thorough explanation of how the repository is structured.
 
 The assignments included in this portfolio are the following:
 * Assignment 3 - _Edge detection_
