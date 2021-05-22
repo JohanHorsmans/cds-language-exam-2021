@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/JohanHorsmans/cds-language-exam-2021">
-    <img src="README_images/nlp2.png" alt="Logo" width="142" height="131">
+    <img src="README_images/nlp2.png" alt="Logo">
   </a>
   
   <h1 align="center">Cultural Data Science 2021</h1> 
