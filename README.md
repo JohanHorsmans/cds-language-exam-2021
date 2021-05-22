@@ -62,10 +62,10 @@ __NOTE:__ The code and scripts below will only work for Linux, OS X and Worker02
 
 ```bash
 cd {directory where you want the assignment saved}
-git clone https://github.com/JohanHorsmans/cds-visual-exam-2021.git
-cd cds-visual-exam-2021
-bash create_visual_venv.sh
-source visual_venv/bin/activate
+git clone https://github.com/JohanHorsmans/cds-language-exam-2021.git
+cd cds-language-exam-2021
+bash create_lang_venv.sh
+source lang_venv/bin/activate
 bash data_download.sh
 ```
 
@@ -80,14 +80,14 @@ This repository contains the following folders:
 |Folder|Description|
 |:--------|:-----------|
 ```README_images/```| Folder containing the images in the README-files
-```assignment_.*/``` | Folders containing code, data and usage-instructions for the three assignments
+```assignment_.*/``` | Folders containing code, data and usage-instructions for the four assignments
 ```self_assigned/``` | Folder containing code, data and usage-instructions for the self-assigned project
 ```utils/``` | Folder containing functions written by our teacher, [Ross Deans Kristensen-McLachlan](https://pure.au.dk/portal/en/persons/ross-deans-kristensenmclachlan(29ad140e-0785-4e07-bdc1-8af12f15856c).html), which are employed in some of the assignments.
 
 Furthermore, it holds the following files:
 |File|Description|
 |:--------|:-----------|
-```create_visual_venv.sh``` | A bash script that generates a new virtual environment called "visual_venv" with all the packages specified in the ```requirements.txt```-file.
+```create_lang_venv.sh``` | A bash script that generates a new virtual environment called "lang_venv" with all the packages specified in the ```requirements.txt```-file.
 ```data_download.sh``` | A bash-script that automatically downloads all data and creates the necessary folder structure that is needed to run the assignments.
 ```requirements.txt``` | A txt-file containing a list of the packages (and versions) that are needed for the virtual environment.
 ```README.md``` | The README file that you are currently reading.
@@ -99,8 +99,8 @@ Furthermore, it holds the following files:
 
 Go through the following steps to run assignment 3:
 ```bash
-cd {root directory (i.e. cds-visual-exam-2021}
-cd assignment_3
+cd {root directory (i.e. cds-lang-exam-2021}
+cd assignment_2
 python3 edge_detection.py
 ```
 Type: ```python3 edge_detection.py -h``` for a detailed guide on how to specify script-parameters. 
@@ -111,7 +111,7 @@ For more information, see [```assignment_3/README.md```](https://github.com/Joha
 
 Go through the following steps to run assignment 3:
 ```bash
-cd {root directory (i.e. cds-visual-exam-2021}
+cd {root directory (i.e. cds-lang-exam-2021}
 cd assignment_3
 python3 edge_detection.py
 ```
@@ -123,7 +123,7 @@ For more information, see [```assignment_3/README.md```](https://github.com/Joha
 
 Go through the following steps to run assignment 4:
 ```bash
-cd {root directory (i.e. cds-visual-exam-2021}
+cd {root directory (i.e. cds-lang-exam-2021}
 cd assignment_4
 python3 lr-mnist.py
 python3 nn-mnist.py
@@ -136,7 +136,7 @@ For more information, see [```assignment_4/README.md```](https://github.com/Joha
 
 Go through the following steps to run assignment 5:
 ```bash
-cd {root directory (i.e. cds-visual-exam-2021}
+cd {root directory (i.e. cds-lang-exam-2021}
 cd assignment_5
 python3 cnn-artists.py
 ```
@@ -158,6 +158,8 @@ Distributed under the [Apache License 2.0](https://www.apache.org/licenses/LICEN
 ## Acknowledgements
 * [Ross Dean McLachlan](https://pure.au.dk/portal/en/persons/ross-deans-kristensenmclachlan(29ad140e-0785-4e07-bdc1-8af12f15856c).html) - Our teacher for the Visual Analytics course
 * [Emil Jessen](https://github.com/emiltj) - With whom I have collaborated in creating this README structure and brainstormed ideas for the self-assigned project.
+* * [Gustav Aarup Lauridsen](https://github.com/Guscode) - My partner for assignment 5 and the self-assigned project.
+
 
 <!-- CONTACT -->
 ## Contact
