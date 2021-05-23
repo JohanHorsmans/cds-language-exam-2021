@@ -77,7 +77,7 @@ The neural network that I added consisted of the following; a convolutional laye
 
 For the deep learning model, I made it possible to specify training epochs and embedding-dimensions from the terminal using argparse.
 
-I have decided to use the macro F1-score as my evluation metric. For the reason behind this, please refer to [assignment 5, methods](https://github.com/JohanHorsmans/cds-language-exam-2021/tree/main/assignment_5#methods).
+I have decided to use the macro F1-score as my evaluation metric. For the reason behind this, please refer to [assignment 5, methods](https://github.com/JohanHorsmans/cds-language-exam-2021/tree/main/assignment_5#methods).
 
 <!-- HOW TO RUN -->
 ## How to run
