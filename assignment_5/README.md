@@ -21,6 +21,7 @@
   <summary>Table of Contents</summary>
   <ol>
     <li><a href="#official-description-from-instructor">Official description from instructor</a></li>
+    <li><a href="#contribution">Contribution</a></li>
     <li><a href="#methods">Methods</a></li>
     <li><a href="#how-to-run">How to run</a></li>
     <li><a href="#repository-structure-and-contents">Repository structure and contents</a></li>
@@ -69,21 +70,34 @@ This assignment is designed to test that you have an understanding of:
 * how to perform (un)supervised machine learning on text data;
 * how to present results in an accessible manner.
 
+<!-- CONTRIBUTION -->
+## Contribution
+I have carried out the following assignment with [Gustav Aarup Lauridsen](https://github.com/Guscode). Gustav and I contributed equally to every stage of this project from initial conception and implementation, through the production of the final output and structuring of the repository. (50/50%)
+
 <!-- METHODS -->
 ## Methods
+We have chosen the OffensEval2020 dataset containing 3000+ Danish comments from Ekstra Bladet and Reddit, labeled with a binary coding scheme indicating offensiveness (link: https://figshare.com/articles/dataset/Danish_Hate_Speech_Abusive_Language_data/12220805).
 
-The problem of this assignment relates to mangling and processing date-time-data and calculating rolling sentiment scores for a large text corpus. I use pandas to convert the data to date-time format and arrange them in chronological order. To reduce run-time, I carry out the analysis on a subset of 100.000 randomly sampled headlnes. I use SpaCy text blob to calculate the sentiment-score for the headlines. I batch the data together with a batch-size of 500 to make the analysis run faster. I then calculate mean sentiment score for each week and month and plot the scores in two separate graphs (see _discussion of results_). Lastly, the script also writes a csv-file named _"sentiment.csv"_ with the score for each individual headline.
+OffensEval2020 was a competition where researchers and data scientists from all over the world competed to create the best classification models for various languages (including Danish).
+
+The best team in the Danish task achieved a macro F1-score of 0.8119 and the worst team achieved a score of 0.4913. For the full paper, see: https://arxiv.org/pdf/2006.07235.pdf
+
+We wanted to create a text classifier that could classify offensive comments in Danish and compare our macro F1-score with the results from the OffensEval2020 competition.
+
+We trained the following models: Logistic Regression, Support Vector Machine, Neural Network, Random Forest & Decision Tree (see code for further specifications). We also combined them in an ensemble where a mix of majority vote- and average ensembling was employed (see code for specifications). We have chosen to use macro F1-score as our metric:
+
+The F1-score is a metric devised to fuse the relation between model precision and recall into a unified score. The metric is defined as taking the harmonic mean of precision and recall. The reason for using the harmonic mean, rather than the arithmetic mean, is that the harmonic mean of a recall-score of 0 and a precision-score of 100 would result in an F1-score of 0, rather than 50. This is advantageous, since it means that a model cannot achieve a high F1-score by having a high recall or precision by itself. The macro-averaging procedure of the macro F1-score involves calculating the arithmetic mean of the F1-score for each class.
 
 <!-- HOW TO RUN -->
 ## How to run
 
 __NOTICE:__ To run the assignment, you need to have configured and activated your virtual environment. See the main [README](https://github.com/JohanHorsmans/cds-language-exam-2021/blob/main/README.md) for a guide on how to do this.
 
-Go through the following steps to run assignment 3:
+Go through the following steps to run assignment 5:
 ```bash
 cd {root directory (i.e. cds-language-exam-2021}
-cd assignment_3
-python3 sentiment.py
+cd assignment_5
+python3 HateClass.py
 ```
 <!-- REPOSITORY STRUCTURE AND CONTENTS -->
 ## Repository structure and contents
@@ -92,37 +106,18 @@ This repository contains the following folders:
 
 |Folder|Description|
 |:--------|:-----------|
-```data/``` | Folder containing a dataset consisting over a million headlines taken from the Australian news source ABC (Start Date: **2003-02-19** ; End Date: **2020-12-31**)
+```data/``` | Folder containing a testing- and training dataset consisting over a 3.000 social media comments labeled after offensiveness (i.e. _NOT_ and _OFF_).
 
 Furthermore, it holds the following files:
 |File|Description|
 |:--------|:-----------|
-```sentiment.py``` | The python script for the assignment
+```HateClass.py``` | The python script for the assignment
 ```README.md``` | The README file that you are currently reading.
 
 <!-- DISCUSSION OF RESULTS -->
 ## Discussion of results
 
-Two plots are produced by the script. One for the weekly rolling sentiment score (figure 1) and one for the monthly rolling sentiment score (figure 2). The two plots show that the news data is generally positive (Sentiment score > 0) in spite of the fluctuations on a weekly/monthly basis. We see that the variance in sentiment scores is larger on a weekly basis than on a monthly basis, indicating that the variance seen from week to week is quite similar in both directions and thus, to a certain extent, cancels each other out when analysed on a monthly basis.
-
-
-<br />
-<p align="center">
-  <a href="https://github.com/JohanHorsmans/cds-visual-exam-2021">
-    <img src="../README_images/plot2.png" alt="Weekly">
-  </a>
-  
-<p align="center">
-Figure 1: Weekly sentiment score
-  
-<p align="center">
-  <a href="https://github.com/JohanHorsmans/cds-visual-exam-2021">
-    <img src="../README_images/plot1.png" alt="Monthly">
-  </a>
-
-<p align="center">
-Figure 2: Monthly sentiment score
-
+Our best performing model was our ensemble containing all models, which achieved a macro F1-score of 0.71. It is important to note that the dataset is heavily skewed towards non-offensive comments, so the macro F1-score should be taken with a grain of salt. Nonetheless it would have ranked as the 23rd best model (out of 38) in the OffensEval2020 competition, so we deem it to be quite successful when taking the circumstances into account.
 
 <br />
 <p align="center">
