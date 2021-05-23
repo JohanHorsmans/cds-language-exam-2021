@@ -86,7 +86,7 @@ __NOTICE:__ To run the assignment, you need to have configured and activated you
 
 Go through the following steps to run assignment 5:
 ```bash
-cd {root directory (i.e. cds-language-exam-2021}
+cd {root directory (i.e. cds-language-exam-2021)}
 cd assignment_6
 python3 GoT_lr.py
 python3 GoT_dl.py
