@@ -56,9 +56,6 @@ __Tips__
 * Your choice of data will (or should) dictate the task you choose - that is to say, some data are clearly more suited to supervised than unsupervised learning and vice versa. Make sure you use an appropriate method for the data and for the question you want to answer
 * Your peer reviewer needs to see how you came to your results - they don't strictly speaking need lots of fancy command line arguments set up using argparse(). You should still try to have well-structured code, of course, but you can focus less on having a fully-featured command line tool
 
-__Bonus challenges__
-* Do both tasks - either with the same or different datasets
-
 __General instructions__
 * You should upload standalone .py script(s) which can be executed from the command line
 * You must include a requirements.txt file and a bash script to set up a virtual environment for the project You can use those on worker02 as a template
