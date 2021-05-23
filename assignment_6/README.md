@@ -68,7 +68,7 @@ The problem of the assignment relates to classifying complex textual data using,
 A word embedding is essentially just a large vector representing words’ location in an abstract word-space, where closely related words will be placed close to each other. Such a mathematical representation of words, conceptually, means that if one, e.g., used the word embedding for king and subtracted the embedding for man and added the embedding for woman, one would end up with the word embedding for queen, i.e.:
 
 <p align="center">
-    // king - man + woman = queen
+    king - man + woman = queen
 </p>
 
 The reason for using these embeddings is that this representation of language and how words relate to each should allow my model to make more accurate predictions. By understanding how words relate to one another, the model can infer how the classification of some words/sentences can generalize to other similar words/sentences. This is a process known as transfer learning. As such, all it takes to utilize the pre-trained embeddings on a classification task, such as this, is to add an untrained neural network to the end of the pretrained embedding layer. 
