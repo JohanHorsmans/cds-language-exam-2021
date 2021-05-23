@@ -83,7 +83,7 @@ def main():
     mean_month_plot.savefig(os.path.join("out", "mean_month_plot"))
 
 
-    #Write the dataframe as a .csv-file called 'sentiment.csv:
+    # Write the "headlines"-dataframe as a .csv-file called 'sentiment.csv:
     headlines.to_csv(os.path.join("out", "sentiment.csv")) 
 
 if __name__=="__main__":
