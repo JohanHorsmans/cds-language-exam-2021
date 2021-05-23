@@ -63,17 +63,21 @@ This assignment is designed to test that you have an understanding of:
 
 <!-- METHODS -->
 ## Methods
-We have chosen the OffensEval2020 dataset containing 3000+ Danish comments from Ekstra Bladet and Reddit, labeled with a binary coding scheme indicating offensiveness (link: https://figshare.com/articles/dataset/Danish_Hate_Speech_Abusive_Language_data/12220805).
+The problem of the assignment relates to classifying complex textual data using, respectively, a logistic regression- and a deep learning classifier. For both models, I preprocess the data and split it into a training- and testing set (with 25% of the sentences allocated to the testing-set). For the logistic regression classifier, I use the LogisticRegression-model from the sklearn.linear_model module. For the deep learning classifier, I utilize the pretrained GloVe-word embeddings. 
 
-OffensEval2020 was a competition where researchers and data scientists from all over the world competed to create the best classification models for various languages (including Danish).
+A word embedding is essentially just a large vector representing words’ location in an abstract word-space, where closely related words will be placed close to each other. Such a mathematical representation of words, conceptually, means that if one, e.g., used the word embedding for king and subtracted the embedding for man and added the embedding for woman, one would end up with the word embedding for queen, i.e.:
 
-The best team in the Danish task achieved a macro F1-score of 0.8119 and the worst team achieved a score of 0.4913. For the full paper, see: https://arxiv.org/pdf/2006.07235.pdf
+<p align="center">
+    // king - man + woman = queen
+</p>
 
-We wanted to create a text classifier that could classify offensive comments in Danish and compare our macro F1-score with the results from the OffensEval2020 competition.
+The reason for using these embeddings is that this representation of language and how words relate to each should allow my model to make more accurate predictions. By understanding how words relate to one another, the model can infer how the classification of some words/sentences can generalize to other similar words/sentences. This is a process known as transfer learning. As such, all it takes to utilize the pre-trained embeddings on a classification task, such as this, is to add an untrained neural network to the end of the pretrained embedding layer. 
 
-We trained the following models: Logistic Regression, Support Vector Machine, Neural Network, Random Forest & Decision Tree (see code for further specifications). We also combined them in an ensemble where a mix of majority vote- and average ensembling was employed (see code for specifications). We have chosen to use macro F1-score as our metric:
+The neural network that I added consisted of the following; a convolutional layer with ReLU-activation, a max-pooling layer, a dense layer with 10 neurons and ReLU-activation and an output layer with 8 nodes; 1 for each class.
 
-The F1-score is a metric devised to fuse the relation between model precision and recall into a unified score. The metric is defined as taking the harmonic mean of precision and recall. The reason for using the harmonic mean, rather than the arithmetic mean, is that the harmonic mean of a recall-score of 0 and a precision-score of 100 would result in an F1-score of 0, rather than 50. This is advantageous, since it means that a model cannot achieve a high F1-score by having a high recall or precision by itself. The macro-averaging procedure of the macro F1-score involves calculating the arithmetic mean of the F1-score for each class.
+For the deep learning model, I made it possible to specify training epochs and embedding-dimensions from the terminal using argparse.
+
+I have decided to use the macro F1-score as my evluation metric. For the reason behind this, please refer to [assignment 5, methods](https://github.com/JohanHorsmans/cds-language-exam-2021/tree/main/assignment_5#methods).
 
 <!-- HOW TO RUN -->
 ## How to run
@@ -84,8 +88,28 @@ Go through the following steps to run assignment 5:
 ```bash
 cd {root directory (i.e. cds-language-exam-2021}
 cd assignment_6
-python3 HateClass.py
+python3 GoT_lr.py
+python3 GoT_dl.py
 ```
+
+You can specify the following optional argument from the terminal in the ```GoT_dl.py```-script:
+
+_Epochs:_
+```bash
+"-e", "--epochs"
+default = 10
+type = int, 
+help = "int, number of training epochs for the neural network [DEFAULT]: 10"
+```
+
+_Embedding-size:_
+```bash
+"-es", "--embedding_size", 
+default = 50, 
+type = int, 
+help = "int, the size of the word embeddings loaded from the the GloVe-model. Options: 50, 100, 200, 300 [DEFAULT]: 50")
+```
+
 <!-- REPOSITORY STRUCTURE AND CONTENTS -->
 ## Repository structure and contents
 
@@ -93,18 +117,19 @@ This repository contains the following folders:
 
 |Folder|Description|
 |:--------|:-----------|
-```data/``` | Folder containing a testing- and training dataset consisting over a 3.000 social media comments labeled after offensiveness (i.e. _NOT_ and _OFF_).
+```data/``` | Folder containing a csv-file with the script from every eeason of _Game of Thrones_.
 
 Furthermore, it holds the following files:
 |File|Description|
 |:--------|:-----------|
-```HateClass.py``` | The python script for the assignment
+```GoT_lr.py``` | The python script for the logistic regression model in this assignment
+```GoT_dl.py``` | The python script for the deep learning model in this assignment
 ```README.md``` | The README file that you are currently reading.
 
 <!-- DISCUSSION OF RESULTS -->
 ## Discussion of results
 
-Our best performing model was our ensemble containing all models, which achieved a macro F1-score of 0.71. It is important to note that the dataset is heavily skewed towards non-offensive comments, so the macro F1-score should be taken with a grain of salt. Nonetheless it would have ranked as the 23rd best model (out of 38) in the OffensEval2020 competition, so we deem it to be quite successful when taking the circumstances into account. For an even better model, see our [self-assigned project](https://github.com/JohanHorsmans/cds-language-exam-2021/tree/main/self_assigned), where we achieve a macro F1-score of XX on the same dataset.
+For the logistic regression model, I achieved a macro F1-score of xx. For the deep-learning model, I achieved a macro F1-score of xx after training for 50 epochs using a word embedding size of 300 features.   
 
 <br />
 <p align="center">
