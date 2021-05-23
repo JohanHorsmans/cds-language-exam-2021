@@ -68,7 +68,7 @@ The problem of this assignment relates to mangling and processing date-time-data
 
 __NOTICE:__ To run the assignment, you need to have configured and activated your virtual environment. See the main [README](https://github.com/JohanHorsmans/cds-language-exam-2021/blob/main/README.md) for a guide on how to do this.
 
-Go through the following steps to run assignment 2:
+Go through the following steps to run assignment 3:
 ```bash
 cd {root directory (i.e. cds-language-exam-2021}
 cd assignment_3
