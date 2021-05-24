@@ -6,7 +6,7 @@
   </a>
   
   <h1 align="center">Cultural Data Science 2021</h1> 
-  <h3 align="center">Self-assigned project</h3> 
+  <h3 align="center"><ins>Self Assigned Project:</ins>
 
   <p align="center">
     Johan Kresten Horsmans
@@ -32,7 +32,7 @@
 <!-- OFFICIAL DESCRIPTION FROM INSTRUCTOR -->
 ## Official description from instructor
 
-### Applying (un)supervised machine learning to text data
+### Danish hate speech detection
 
 The assignment this week involves a little bit of a change of pace and a slightly different format. As we have the Easter break next week, you also have a longer period assigned to complete the work.
 
