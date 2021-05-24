@@ -11,7 +11,7 @@
 Danish hate speech detection</h3> 
 
   <p align="center">
-    Johan Kresten Horsmans
+    Johan Kresten Horsmans & Gustav Aarup Lauridsen
     <br />
     <a href="https://github.com/JohanHorsmans/cds-visual-exam-2021/blob/main/Language_Analytics_Exam.pdf"><strong>Link to PDF with all portfolio descriptions »</strong></a>
     <br />
@@ -22,8 +22,8 @@ Danish hate speech detection</h3>
 <details open="open">
   <summary>Table of Contents</summary>
   <ol>
-    <li><a href="#official-description-from-instructor">Official description from instructor</a></li>
     <li><a href="#contribution">Contribution</a></li>
+    <li><a href="#official-description-from-instructor">Official description from instructor</a></li>
     <li><a href="#methods">Methods</a></li>
     <li><a href="#how-to-run">How to run</a></li>
     <li><a href="#repository-structure-and-contents">Repository structure and contents</a></li>
@@ -31,50 +31,25 @@ Danish hate speech detection</h3>
   </ol>
 </details>
 
-<!-- OFFICIAL DESCRIPTION FROM INSTRUCTOR -->
-## Official description from instructor
-
-### Danish hate speech detection
-
-The assignment this week involves a little bit of a change of pace and a slightly different format. As we have the Easter break next week, you also have a longer period assigned to complete the work.
-
-For this task, you will pick your own dataset to study.
-
-This dataset might be something to do with COVID-19 discourse on Reddit; IMDB reviews; newspaper headlines; whatever it is that catches your eye. However, I strongly recommend using a text dataset from somewhere like Kaggle - https://www.kaggle.com/datasets
-
-When you've chosen the data, do one of the following tasks. One of them is a supervised learning task; the other is unsupervised. 
-
-__NOTE: I HAVE CHOSEN THE FOLLOWING TASK:__
-
-* Train a text classifier on your data to predict some label found in the metadata. For example, maybe you want to use this data to see if you can predict sentiment label based on text content.
-
-You should formulate a short research statement explaining why you have chosen this dataset and what you hope to investigate. This only needs to be a paragraph or two long and should be included as a README file along with the code. E.g.: I chose this dataset because I am interested in... I wanted to see if it was possible to predict X for this corpus.
-
-In this case, your peer reviewer will not just be looking to the quality of your code. Instead, they'll also consider the whole project including choice of data, methods, and output. Think about how you want your output to look. Should there be visualizations? CSVs?
-
-You should also include a couple of paragraphs in the README on the results, so that a reader can make sense of it all. E.g.: I wanted to study if it was possible to predict X. The most successful model I trained had a weighted accuracy of 0.6, implying that it is not possible to predict X from the text content alone. And so on.
-
-__Tips__
-* Think carefully about the kind of preprocessing steps your text data may require - and document these decisions!
-* Your choice of data will (or should) dictate the task you choose - that is to say, some data are clearly more suited to supervised than unsupervised learning and vice versa. Make sure you use an appropriate method for the data and for the question you want to answer
-* Your peer reviewer needs to see how you came to your results - they don't strictly speaking need lots of fancy command line arguments set up using argparse(). You should still try to have well-structured code, of course, but you can focus less on having a fully-featured command line tool
-
-__General instructions__
-* You should upload standalone .py script(s) which can be executed from the command line
-* You must include a requirements.txt file and a bash script to set up a virtual environment for the project You can use those on worker02 as a template
-* You can either upload the scripts here or push to GitHub and include a link - or both!
-* Your code should be clearly documented in a way that allows others to easily follow the structure of your script and to use them from the command line
-
-__Purpose__
-This assignment is designed to test that you have an understanding of:
-
-* how to formulate research projects with computational elements;
-* how to perform (un)supervised machine learning on text data;
-* how to present results in an accessible manner.
-
 <!-- CONTRIBUTION -->
 ## Contribution
-I have carried out the following assignment with [Gustav Aarup Lauridsen](https://github.com/Guscode). Gustav and I contributed equally to every stage of this project from initial conception and implementation, through the production of the final output and structuring of the repository. (50/50%)
+I have made and designed the project assignment with [Gustav Aarup Lauridsen](https://github.com/Guscode). Gustav and I contributed equally to every stage of this project from initial conception and implementation, through the production of the final output and structuring of the repository. (50/50%)
+
+<!-- OFFICIAL DESCRIPTION FROM INSTRUCTOR -->
+## Project description
+
+### Danish hate speech detection
+For our self-assigned project, we wish to see if we can improve the Danish hate-speech detection algorithm that we designed for assignment 5. Here, we achieved a macro F1-score of 0.71. The current state-of-the-art, as described in [_Offenseval2020_](https://arxiv.org/pdf/2006.07235.pdf), achieves a macro F1-score of 0.81. Our goal with this project is to beat this score and build a new state-of-the-art model. We wish to do this using the new [_Ælæctra_](https://github.com/MalteHB/-l-ctra)-architecture. First, we wish to train an Ælektra-model on the official Offenseval2020-dataset (model 1). Followingly, we want to see if we can improve the model's classifications by expanding the training dataset by machine translating comments from an English hate-speech-dataset to Danish and then train an Ælæktra-model on this expanded dataset (model 2).
+
+Following this we are going to upload the best-performing model to [_huggingface_](huggingface.co) and build a .py-script and a Jupyter notebook designed to easily help users deploy the model from huggingface on their own data. 
+
+In summary, the project is comprised of the following steps:
+1. Train and test an Ælæktra-model on the official OffensEval2020-dataset
+2. Machine translate English hate-speech-data to Danish and use it to expand the Danish dataset.
+3. Train an Ælæktra-model on the expanded dataset and test it on the OffensEval2020 testing-data
+4. Upload the best model to huggingface.co
+5. Create a Jupyter notebook and .py-script designed to help users deploy the model on their own data.
+
 
 <!-- METHODS -->
 ## Methods
