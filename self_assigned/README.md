@@ -67,7 +67,11 @@ We trained the following models: Logistic Regression, Support Vector Machine, Ne
 
 The F1-score is a metric devised to fuse the relation between model precision and recall into a unified score. The metric is defined as taking the harmonic mean of precision and recall. The reason for using the harmonic mean, rather than the arithmetic mean, is that the harmonic mean of a recall-score of 0 and a precision-score of 100 would result in an F1-score of 0, rather than 50. This is advantageous, since it means that a model cannot achieve a high F1-score by having a high recall or precision by itself. The macro-averaging procedure of the macro F1-score involves calculating the arithmetic mean of the F1-score for each class.
 
-For our modeling, we have chosen to use the Ælæktra-architecture. The reason behind using this model is that it, across a large range of tasks, has proven itself to be a new gold-standard for Danish NLP-tasks. Furthermore, it requires fewer computational resources to train compared to similar model-architectures.  
+For our modeling, we have chosen to use the Ælæktra-architecture. The reason behind using this model is that it, across a large range of tasks, has proven itself to be a new gold-standard for Danish NLP-tasks. Furthermore, it requires fewer computational resources to train compared to similar model-architectures.
+
+For the machine translation, we utilized xxxx.
+
+We ran- and developed the code on [_Google Colaboratory_](https://colab.research.google.com/?utm_source=scs-index).
 
 <!-- HOW TO RUN -->
 ## How to run
@@ -98,7 +102,7 @@ Furthermore, it holds the following files:
 <!-- DISCUSSION OF RESULTS -->
 ## Discussion of results
 
-Our best performing model was our ensemble containing all models, which achieved a macro F1-score of 0.71. It is important to note that the dataset is heavily skewed towards non-offensive comments, so the macro F1-score should be taken with a grain of salt. Nonetheless it would have ranked as the 23rd best model (out of 38) in the OffensEval2020 competition, so we deem it to be quite successful when taking the circumstances into account. For an even better model, see our [self-assigned project](https://github.com/JohanHorsmans/cds-language-exam-2021/tree/main/self_assigned), where we achieve a macro F1-score of XX on the same dataset.
+For model 1 (original dataset), we achieved a macro F1-score of xx after training for x epochs. For model 2 (expanded dataset), we achieved a macro F1-score of XX. The previously highest performing Danish model achieved a macro F1-score of 0.81 (as described in OffensEval2020). As such, we argue that we have built a new gold-standard model for hate speech detection in Danish. To help facilitate the implementation of the model in real-life scenarios, we have designed a .py-script and a Jupyter notebook with guides for how to run the model on new data. Furthermore, we have released our expanded dataset in this repository and, thus, created the largest publically available dataset of Danish hate speech.
 
 <br />
 <p align="center">
