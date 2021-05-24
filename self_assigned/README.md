@@ -70,7 +70,7 @@ The F1-score is a metric devised to fuse the relation between model precision an
 
 For our modeling, we have chosen to use the Ælæktra-architecture. The reason behind using this model is that it, across a large range of tasks, has proven itself to be a new gold-standard for Danish NLP-tasks. Furthermore, it requires fewer computational resources to train compared to similar model-architectures.
 
-For the machine translation, we utilized xxxx.
+For the machine translation, we utilized [_EasyNMT_](https://github.com/UKPLab/EasyNMT) with the _opus-mt_-model.
 
 We ran- and developed the code on [_Google Colaboratory_](https://colab.research.google.com/?utm_source=scs-index).
 
