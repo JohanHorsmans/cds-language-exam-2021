@@ -13,5 +13,7 @@ python -m ipykernel install --user --name=$VENVNAME
 
 test -f requirements.txt && pip install -r requirements.txt
 
+python -m spacy download en_core_web_sm
+
 deactivate
 echo "build $VENVNAME"

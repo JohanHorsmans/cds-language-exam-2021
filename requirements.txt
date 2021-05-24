@@ -6,4 +6,6 @@ spacy-legacy==3.0.1
 spacytextblob==0.1.7
 numpy==1.19.4
 networkx==2.5
-pygraphviz==1.6
+scikit-learn
+tensorflow
+transformers
