@@ -28,10 +28,10 @@
     <li>
       <a href="#portfolio-assignments">Portfolio assignments</a>
       <ul>
+        <li><a href="#assignment-6---text-classification-using-deep-learning">Assignment 6 - Text classification using Deep Learning</a></li>
         <li><a href="#assignment-2---string-processing-with-python">Assignment 2 - String Processing With Python</a></li>
         <li><a href="#assignment-3---sentiment-analysis">Assignment 3 - Sentiment Analysis</a></li>
         <li><a href="#assignment-5---(un)supervised-machine-learning">Assignment 5 - (Un)supervised Machine Learning</a></li
-        <li><a href="#assignment-6---text-classification-using-deep-learning">Assignment 6 - Text classification using Deep Learning</a></li>
         <li><a href="#self-assigned-project---hate-speech-detection">Self-assigned project - Hate Speech Detection</a></li>
       </ul>
     </li>
@@ -133,7 +133,6 @@ Type: ```python3 cnn-artists.py -h``` for a detailed guide on how to specify scr
 For more information, see [```assignment_5/README.md```](https://github.com/JohanHorsmans/cds-visual-exam-2021/tree/main/assignment_5)
 
 ### Assignment 6 - Text classification using Deep Learning
-
 
 Go through the following steps to run assignment 6:
 ```bash
