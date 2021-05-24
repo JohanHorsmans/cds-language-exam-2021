@@ -8,7 +8,7 @@
   <h1 align="center">Cultural Data Science 2021</h1> 
   <h3 align="center"><ins>Self Assigned Project:</ins>
 
-Creating and classifying fake art</h3> 
+Danish hate speech detection</h3> 
 
   <p align="center">
     Johan Kresten Horsmans
