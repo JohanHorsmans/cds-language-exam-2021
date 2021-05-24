@@ -67,7 +67,6 @@ git clone https://github.com/JohanHorsmans/cds-language-exam-2021.git
 cd cds-language-exam-2021
 bash create_lang_venv.sh
 source lang_venv/bin/activate
-bash data_download.sh
 ```
 
 <!-- REPOSITORY STRUCTURE AND CONTENTS -->
