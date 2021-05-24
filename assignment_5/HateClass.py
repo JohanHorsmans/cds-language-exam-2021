@@ -24,8 +24,8 @@ from sklearn.neural_network import MLPClassifier
 def main():
     
     #Create filenames to load train and test data
-    filename = os.path.join("Data","Train_Hate.tsv")
-    filename_test = os.path.join("Data", "Test_Hate.tsv")
+    filename = os.path.join("data","Train_Hate.tsv")
+    filename_test = os.path.join("data", "Test_Hate.tsv")
 
     #load Data    
     DATA = pd.read_csv(filename, index_col=0, sep="\t")
