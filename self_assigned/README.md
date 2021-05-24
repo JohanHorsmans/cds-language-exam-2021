@@ -53,6 +53,8 @@ In summary, the project is comprised of the following steps:
 
 <!-- METHODS -->
 ## Methods
+
+__NOTE: Some parts of the following sections is repeated from [_assignment 5_](https://github.com/JohanHorsmans/cds-language-exam-2021/tree/main/assignment_5)__
 We have chosen the OffensEval2020 dataset containing 3000+ Danish comments from Ekstra Bladet and Reddit, labeled with a binary coding scheme indicating offensiveness (link: https://figshare.com/articles/dataset/Danish_Hate_Speech_Abusive_Language_data/12220805).
 
 OffensEval2020 was a competition where researchers and data scientists from all over the world competed to create the best classification models for various languages (including Danish).
@@ -64,6 +66,8 @@ We wanted to create a text classifier that could classify offensive comments in 
 We trained the following models: Logistic Regression, Support Vector Machine, Neural Network, Random Forest & Decision Tree (see code for further specifications). We also combined them in an ensemble where a mix of majority vote- and average ensembling was employed (see code for specifications). We have chosen to use macro F1-score as our metric:
 
 The F1-score is a metric devised to fuse the relation between model precision and recall into a unified score. The metric is defined as taking the harmonic mean of precision and recall. The reason for using the harmonic mean, rather than the arithmetic mean, is that the harmonic mean of a recall-score of 0 and a precision-score of 100 would result in an F1-score of 0, rather than 50. This is advantageous, since it means that a model cannot achieve a high F1-score by having a high recall or precision by itself. The macro-averaging procedure of the macro F1-score involves calculating the arithmetic mean of the F1-score for each class.
+
+For our modeling, we have chosen to use the Ælæktra-architecture. The reason behind using this model is that it, across a large range of tasks, has proven itself to be a new gold-standard for Danish NLP-tasks. Furthermore, it requires fewer computational resources to train compared to similar model-architecture.  
 
 <!-- HOW TO RUN -->
 ## How to run
