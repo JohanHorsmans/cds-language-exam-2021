@@ -30,8 +30,8 @@
       <ul>
         <li><a href="#assignment-2---string-processing-with-python">Assignment 2 - String Processing With Python</a></li>
         <li><a href="#assignment-3---sentiment-analysis">Assignment 3 - Sentiment Analysis</a></li>
-        <li><a href="#assignment-4---network-analysis">Assignment 4 - Network Analysis</a></li>
-        <li><a href="#assignment-5---(un)supervised-machine-learning">Assignment 5 - (Un)supervised Machine Learning</a></li>
+        <li><a href="#assignment-5---(un)supervised-machine-learning">Assignment 5 - (Un)supervised Machine Learning</a></li
+        <li><a href="#assignment-6---text-classification-using-deep-learning">Assignment 6 - Text classification using Deep Learning</a></li>
         <li><a href="#self-assigned-project---hate-speech-detection">Self-assigned project - Hate Speech Detection</a></li>
       </ul>
     </li>
@@ -48,9 +48,10 @@
 This repository houses the exam of _Johan Kresten Horsmans (AU ID: au618771)_ for the course [_Language Analytics_](https://kursuskatalog.au.dk/en/course/101990/Language-Analytics), as part of the bachelor's elective [_Cultural Data Science_](https://bachelor.au.dk/en/supplementary-subject/culturaldatascience/) at Aarhus University. The repository consists of 4 assignments: three class assignments and one self-assigned project. The following README details how to run the code and contains a thorough explanation of how the repository is structured.
 
 The assignments included in this portfolio are the following:
-* Assignment 3 - _Edge detection_
-* Assignment 4 - _Logistic Regression and Neural Network benchmark mnist classification_
-* Assignment 5 - _CNN classification of impressionist paintings_
+* Assignment 2 - _String Processing With Python_
+* Assignment 3 - _Sentiment Analysis_
+* Assignment 5 - _(Un)supervised Machine Learning_
+* Assignment 6 - _Text classification using Deep Learning_
 * Self-assigned project - _Creating fake Monet-images with style transfer and classifying them with CNN’s_
 
 <!-- HOW TO RUN -->
@@ -105,7 +106,7 @@ python3 edge_detection.py
 ```
 Type: ```python3 edge_detection.py -h``` for a detailed guide on how to specify script-parameters. 
 
-For more information, see [```assignment_3/README.md```](https://github.com/JohanHorsmans/cds-visual-exam-2021/tree/main/assignment_3)
+For more information, see [```assignment_2/README.md```](https://github.com/JohanHorsmans/cds-visual-exam-2021/tree/main/assignment_3)
 
 ### Assignment 3 - Sentiment Analysis
 
@@ -119,19 +120,6 @@ Type: ```python3 edge_detection.py -h``` for a detailed guide on how to specify 
 
 For more information, see [```assignment_3/README.md```](https://github.com/JohanHorsmans/cds-visual-exam-2021/tree/main/assignment_3)
 
-### Assignment 4 - Network Analysis
-
-Go through the following steps to run assignment 4:
-```bash
-cd {root directory (i.e. cds-lang-exam-2021}
-cd assignment_4
-python3 lr-mnist.py
-python3 nn-mnist.py
-```
-Type: ```python3 lr-mnist.py -h``` and ```python3 nn-mnist.py -h``` for a detailed guide on how to specify script-parameters. 
-
-For more information, see [```assignment_4/README.md```](https://github.com/JohanHorsmans/cds-visual-exam-2021/tree/main/assignment_4)
-
 ### Assignment 5 - (Un)supervised Machine Learning
 
 Go through the following steps to run assignment 5:
@@ -143,6 +131,20 @@ python3 cnn-artists.py
 Type: ```python3 cnn-artists.py -h``` for a detailed guide on how to specify script-parameters. 
 
 For more information, see [```assignment_5/README.md```](https://github.com/JohanHorsmans/cds-visual-exam-2021/tree/main/assignment_5)
+
+### Assignment 6 - Text classification using Deep Learning
+
+
+Go through the following steps to run assignment 6:
+```bash
+cd {root directory (i.e. cds-lang-exam-2021}
+cd assignment_6
+python3 GoT-lr.py
+python3 GoT-dl.py
+```
+Type: ```python3 GoT-dl.py -h``` for a detailed guide on how to specify script-parameters. 
+
+For more information, see [```assignment_6/README.md```](https://github.com/JohanHorsmans/cds-visual-exam-2021/tree/main/assignment_4)
 
 ### Self-assigned project - Creating fake Monet-images with style transfer and classifying them with CNN's
 
