@@ -97,11 +97,11 @@ Furthermore, it holds the following files:
 
 ### Assignment 2 - String Processing With Python
 
-Go through the following steps to run assignment 3:
+Go through the following steps to run assignment 2:
 ```bash
 cd {root directory (i.e. cds-lang-exam-2021}
 cd assignment_2
-python3 edge_detection.py
+python3 collocation.py
 ```
 Type: ```python3 edge_detection.py -h``` for a detailed guide on how to specify script-parameters. 
 
@@ -113,7 +113,7 @@ Go through the following steps to run assignment 3:
 ```bash
 cd {root directory (i.e. cds-lang-exam-2021}
 cd assignment_3
-python3 edge_detection.py
+python3 sentiment.py
 ```
 Type: ```python3 edge_detection.py -h``` for a detailed guide on how to specify script-parameters. 
 
@@ -125,7 +125,7 @@ Go through the following steps to run assignment 5:
 ```bash
 cd {root directory (i.e. cds-lang-exam-2021}
 cd assignment_5
-python3 cnn-artists.py
+python3 HateClass.py
 ```
 Type: ```python3 cnn-artists.py -h``` for a detailed guide on how to specify script-parameters. 
 
