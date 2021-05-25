@@ -48,6 +48,7 @@ def main():
     headlines = headlines.sample(100000) 
 
     print("[INFO]: Calculating sentiment scores")
+    
     # Define empty list for sentiment-scores:
     sentiment_scores = [] 
 
@@ -83,11 +84,13 @@ def main():
         title = "Monthly rolling mean of sentiment scores") # Set plot title
     
     print("[INFO]: Saving plots")
+    
     # Save month_plot:
     mean_month_plot = month_plot.get_figure()
     mean_month_plot.savefig(os.path.join("out", "mean_month_plot"))
     
     print("[INFO]: Saving .csv-file with sentiment-scores")
+    
     # Write the "headlines"-dataframe as a .csv-file called 'sentiment.csv:
     headlines.to_csv(os.path.join("out", "sentiment.csv")) 
 
