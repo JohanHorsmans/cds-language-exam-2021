@@ -52,11 +52,21 @@ def main(filepath, keyword, window_size): #Define a function with three paramete
         with open(text, "r", encoding="utf-8") as text: # Open the contents of the .txt-file.
             loaded_text = text.read() # Load the contents of the .txt-file.
             loaded_text = loaded_text.lower() # Use the lower-method to make all letters in the text lowercase to ensure that identical words with different casing are regarded as the same word.
-            regex = re.compile('[^a-zA-Z\s]') # Use regular expression to define special characters which I want to delete; \s is whitespace, a-zA-Z - matches all the letters, ^ - negates them all so it deletes everything else. This is done to ensure that, i.e., "fish." and "Fish!" are recognized as identical words.
-            loaded_text = regex.sub('', loaded_text) # Remove words defined in the above regular expression.
-        t = -1 # Define indexing-variable, t, as -1
-        loaded_text = loaded_text.split() # Split text into individual words.
-        all_words.append(loaded_text) #A ppend the text to a list that will be hold all words in the texts.
+            
+            # Use regular expression to define special characters which I want to delete; \s is whitespace, a-zA-Z - matches all the letters, ^ - negates them all so it deletes everything else. This is done to ensure that, i.e., "fish." and "Fish!" are recognized as identical words:
+            regex = re.compile('[^a-zA-Z\s]') 
+            
+            # Remove words defined in the above regular expression:
+            loaded_text = regex.sub('', loaded_text) 
+        
+        # Split text into individual words:
+        loaded_text = loaded_text.split() 
+        
+        # Append the text to a list that will be hold all words in the texts:
+        all_words.append(loaded_text) 
+        
+        # Define indexing-variable, t, as -1:
+        t = -1 
         while True: # While true (i.e. as long as possible)...
             try: # ... do the following:
                 t = loaded_text.index(keyword, t + 1) # Try to find keyword at t + 1 (where t increases by 1 iteratively).
@@ -76,10 +86,16 @@ def main(filepath, keyword, window_size): #Define a function with three paramete
 
     print("[INFO]: Calculating collocates")
     
-    collocates = (" ".join(collocates)) # Transform "collocates"-lists into a single string. 
-    collocates = collocates.split() # Split collocates-string into individual words.
-    collocate_count = Counter(collocates).most_common(len(collocates)) # Count unique words and their apperance. The reason for using the most_common specifications is that it gives a tuple as an output, which can be indexed. 
-        
+    # Transform "collocates"-lists into a single string:
+    collocates = (" ".join(collocates)) 
+    
+    # Split collocates-string into individual words:
+    collocates = collocates.split() 
+    
+    # Count unique words and their apperance. The reason for using the most_common specifications is that it gives a tuple as an output, which can be indexed:
+    collocate_count = Counter(collocates).most_common(len(collocates))         
+    
+    # Calculate O11:
     for i in list(range(0,len(collocate_count))): # For each element in the collocate...
         collocate_word.append(collocate_count[i][0]) # ... Append the word to the "collocate_word"-list.
         O11.append(collocate_count[i][1]) # ... Append the count of the word to the "O11"-list.
@@ -131,11 +147,17 @@ def main(filepath, keyword, window_size): #Define a function with three paramete
     if not os.path.exists("out"):
             os.makedirs("out")
     
-    dict = {'collocate': collocate_word, 'raw_frequency': O11, 'MI': MI} # Create a dictionary with the column-names and values for the .csv-file
+    # Create a dictionary with the column-names and values for the .csv-file:
+    dict = {'collocate': collocate_word, 'raw_frequency': O11, 'MI': MI} 
     
-    df = pd.DataFrame(dict) # Creating a pandas-dataframe using the above dictionary.
-    df = df.sort_values("MI", ascending = False) # Sorting the dataframe so the MI column is sorted after score (high -> low).
-    df.to_csv(f'out/{keyword} - window_size_{window_size}.csv') # Write the dataframe to the "out"-folder as a .csv-file called "{keyword} - window_size_{window_size}.csv" .
+    # Create a pandas-dataframe using the above dictionary:
+    df = pd.DataFrame(dict) 
+    
+    # Sorting the dataframe so the MI column is sorted after score (high -> low):
+    df = df.sort_values("MI", ascending = False) 
+    
+    # Write the dataframe to the "out"-folder as a .csv-file called "{keyword} - window_size_{window_size}.csv":
+    df.to_csv(f'out/{keyword} - window_size_{window_size}.csv') 
 
 # If the script is called from the commandline make filepath the first argument, keyword the second argument and window_size the third argument:
 if __name__=="__main__":
