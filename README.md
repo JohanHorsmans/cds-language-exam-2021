@@ -78,9 +78,6 @@ bash delete_lang_venv.sh
 <!-- REPOSITORY STRUCTURE AND CONTENTS -->
 ## Repository structure and contents
 
-__NOTE:__ Throughout the repository's README-files (including this one), the repository structure is described as it appears before downloading the
-additional data specified in the bash-script above.
-
 This repository contains the following folders:
 
 |Folder|Description|
