@@ -99,7 +99,7 @@ Furthermore, it holds the following files:
 
 Go through the following steps to run assignment 2:
 ```bash
-cd {root directory (i.e. cds-lang-exam-2021}
+cd {root directory (i.e. cds-lang-exam-2021)}
 cd assignment_2
 python3 collocation.py
 ```
@@ -111,7 +111,7 @@ For more information, see [```assignment_2/README.md```](https://github.com/Joha
 
 Go through the following steps to run assignment 3:
 ```bash
-cd {root directory (i.e. cds-lang-exam-2021}
+cd {root directory (i.e. cds-lang-exam-2021)}
 cd assignment_3
 python3 sentiment.py
 ```
@@ -123,7 +123,7 @@ For more information, see [```assignment_3/README.md```](https://github.com/Joha
 
 Go through the following steps to run assignment 5:
 ```bash
-cd {root directory (i.e. cds-lang-exam-2021}
+cd {root directory (i.e. cds-lang-exam-2021)}
 cd assignment_5
 python3 HateClass.py
 ```
@@ -135,7 +135,7 @@ For more information, see [```assignment_5/README.md```](https://github.com/Joha
 
 Go through the following steps to run assignment 6:
 ```bash
-cd {root directory (i.e. cds-lang-exam-2021}
+cd {root directory (i.e. cds-lang-exam-2021)}
 cd assignment_6
 python3 GoT-lr.py
 python3 GoT-dl.py
