@@ -25,7 +25,7 @@ nlp = spacy.load("en_core_web_sm")
 spacy_text_blob = SpacyTextBlob()
 nlp.add_pipe(spacy_text_blob)
 
-# Define the main function of the script and what parameters it takes: 
+# Define the main function of the script: 
 def main():
     
     # Specify that if there does not exist a folder called "out", in the directory of the script, it is to be made:
