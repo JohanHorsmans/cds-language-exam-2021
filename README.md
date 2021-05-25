@@ -69,7 +69,8 @@ bash create_lang_venv.sh
 source lang_venv/bin/activate
 ```
 If you wish to uninstall the virtual environment after running the code, you need to run the following in your bash-terminal:
-```
+
+```bash
 cd {cds-language-exam-2021}
 bash delete_lang_venv.sh
 ```
