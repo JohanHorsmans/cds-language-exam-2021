@@ -88,7 +88,7 @@ We trained the following models: Logistic Regression, Support Vector Machine, Ne
 
 The F1-score is a metric devised to fuse the relation between model precision and recall into a unified score. The metric is defined as taking the harmonic mean of precision and recall. The reason for using the harmonic mean, rather than the arithmetic mean, is that the harmonic mean of a recall-score of 0 and a precision-score of 100 would result in an F1-score of 0, rather than 50. This is advantageous, since it means that a model cannot achieve a high F1-score by having a high recall or precision by itself. The macro-averaging procedure of the macro F1-score involves calculating the arithmetic mean of the F1-score for each class. 
 
-To ensure reproducible results, I used random.seed.
+To ensure reproducible results, we used random.seed.
 
 <!-- HOW TO RUN -->
 ## How to run
