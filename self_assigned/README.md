@@ -62,33 +62,39 @@ OffensEval2020 was a competition where researchers and data scientists from all 
 
 The best team in the Danish task achieved a macro F1-score of 0.8119 and the worst team achieved a score of 0.4913. For the full paper, see: [_OffensEval2020_](https://arxiv.org/pdf/2006.07235.pdf)
 
-We wanted to create a text classifier that could classify offensive comments in Danish and compare our macro F1-score with the results from the OffensEval2020 competition.
-
-We trained the following models: Logistic Regression, Support Vector Machine, Neural Network, Random Forest & Decision Tree (see code for further specifications). We also combined them in an ensemble where a mix of majority vote- and average ensembling was employed (see code for specifications). We have chosen to use macro F1-score as our metric:
+We wanted to create a text classifier that could classify offensive comments in Danish and compare our macro F1-score with the results from the OffensEval2020 competition:
 
 The F1-score is a metric devised to fuse the relation between model precision and recall into a unified score. The metric is defined as taking the harmonic mean of precision and recall. The reason for using the harmonic mean, rather than the arithmetic mean, is that the harmonic mean of a recall-score of 0 and a precision-score of 100 would result in an F1-score of 0, rather than 50. This is advantageous, since it means that a model cannot achieve a high F1-score by having a high recall or precision by itself. The macro-averaging procedure of the macro F1-score involves calculating the arithmetic mean of the F1-score for each class.
 
 For our modeling, we have chosen to use the Ælæktra-architecture. The reason behind using this model is that it, across a large range of tasks, has proven itself to be a new gold-standard for Danish NLP-tasks. Furthermore, it requires fewer computational resources to train compared to similar model-architectures.
 
+We trained the the Ælæktra model for x-epochs with the following hyperparameters:
+*
+*
+*
+*
+
 For the machine translation, we utilized [_EasyNMT_](https://github.com/UKPLab/EasyNMT) with the _opus-mt_-model.
 
 We ran- and developed the code on [_Google Colaboratory_](https://colab.research.google.com/?utm_source=scs-index).
+
+Our uploaded model can be found here, on huggingface.co: ____
 
 <!-- HOW TO RUN -->
 ## How to run
 
 __NOTICE:__ To run the assignment, you need to have configured and activated your virtual environment. See the main [README](https://github.com/JohanHorsmans/cds-language-exam-2021/blob/main/README.md) for a guide on how to do this.
 
-Go through the following steps to run assignment 5:
+Go through the following steps to run the self-assigned project:
 ```bash
-cd {root directory (i.e. cds-language-exam-2021}
-cd assignment_5
+cd {root directory (i.e. cds-language-exam-2021)}
+cd self_assigned
 python3 HateClass.py
 ```
 <!-- REPOSITORY STRUCTURE AND CONTENTS -->
 ## Repository structure and contents
 
-This repository contains the following folders:
+This repository contains the following folder:
 
 |Folder|Description|
 |:--------|:-----------|
