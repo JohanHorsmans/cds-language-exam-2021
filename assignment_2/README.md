@@ -73,7 +73,7 @@ __NOTICE:__ To run the assignment, you need to have configured and activated you
 
 Go through the following steps to run assignment 2:
 ```bash
-cd {root directory (i.e. cds-language-exam-2021}
+cd {root directory (i.e. cds-language-exam-2021)}
 cd assignment_2
 python3 collocation.py
 ```
