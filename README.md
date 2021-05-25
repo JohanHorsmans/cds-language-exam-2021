@@ -136,10 +136,10 @@ Go through the following steps to run assignment 6:
 ```bash
 cd {root directory (i.e. cds-lang-exam-2021)}
 cd assignment_6
-python3 GoT-lr.py
-python3 GoT-dl.py
+python3 GoT_lr.py
+python3 GoT_dl.py
 ```
-Type: ```python3 GoT-dl.py -h``` for a detailed guide on how to specify script-parameters.
+Type: ```python3 GoT_dl.py -h``` for a detailed guide on how to specify script-parameters.
 
 For more information, see [```assignment_6/README.md```](https://github.com/JohanHorsmans/cds-language-exam-2021/tree/main/assignment_6)
 
