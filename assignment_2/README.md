@@ -66,6 +66,8 @@ The problem in this assignment relates to manually calculating collocates for a 
 
 To solve the task i started by loading- and preprocessing the text to make it lowercase and remove all odd characters. This was done to ensure that, i.e., "fish." and "Fish!" would be recognized as identical words. I then proceeded to write a while-loop to create collocates for the specified window size and keyword. After this, I then progressed to do a series of for-loops with various steps of data-wrangling and mathematical calculations to compute collocate-metrics for all words within the specified window-size of the keyword. Using _pandas_, the script lastly writes a csv-file containing the collocate-word, the raw frequency (i.e. O11-score) and the Mutual Information (MI) score. This csv-file is written to a folder called "out" which is also created by the script. To solve the bonus assignment, I used argparse to enable the user to specify arguments from the terminal. With argparse, I made it possible for the user to specify their own filepath, keyword and window-size with the arguments --filepath, --keyword and --window_size, respectively.
 
+For testing the keyword-argument, I recommend using less common keywords to reduce the runtime of the script. The default keyword is _"california"_.
+
 <!-- HOW TO RUN -->
 ## How to run
 
