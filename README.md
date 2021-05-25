@@ -128,9 +128,7 @@ cd {root directory (i.e. cds-lang-exam-2021)}
 cd assignment_5
 python3 HateClass.py
 ```
-Type: ```python3 cnn-artists.py -h``` for a detailed guide on how to specify script-parameters. 
-
-For more information, see [```assignment_5/README.md```](https://github.com/JohanHorsmans/cds-visual-exam-2021/tree/main/assignment_5)
+For more information, see [```assignment_5/README.md```](https://github.com/JohanHorsmans/cds-language-exam-2021/tree/main/assignment_5)
 
 ### Assignment 6 - Text classification using Deep Learning
 
@@ -141,9 +139,9 @@ cd assignment_6
 python3 GoT-lr.py
 python3 GoT-dl.py
 ```
-Type: ```python3 GoT-dl.py -h``` for a detailed guide on how to specify script-parameters. 
+Type: ```python3 GoT-dl.py -h``` for a detailed guide on how to specify script-parameters.
 
-For more information, see [```assignment_6/README.md```](https://github.com/JohanHorsmans/cds-visual-exam-2021/tree/main/assignment_4)
+For more information, see [```assignment_6/README.md```](https://github.com/JohanHorsmans/cds-language-exam-2021/tree/main/assignment_6)
 
 ### Self-assigned project - Danish hate speech detection
 
