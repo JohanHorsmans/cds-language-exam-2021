@@ -107,7 +107,7 @@ You can also type: ```python3 collocation.py -h``` for a detailed guide on how t
 <!-- REPOSITORY STRUCTURE AND CONTENTS -->
 ## Repository structure and contents
 
-This repository contains the following folders:
+This repository contains the following folder:
 
 |Folder|Description|
 |:--------|:-----------|
