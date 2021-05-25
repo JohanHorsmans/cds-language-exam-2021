@@ -28,7 +28,7 @@ ap = argparse.ArgumentParser(description = "[DESCRIPTION]: A function designed t
 
 ap.add_argument("-f", "--filepath", default = "data", type = str, help = "string, path to text-corpus. Texts need to be .txt-files. Be wary of difference in operating systems in terms of spcifying path with \" / \" or \" \ \" [DEFAULT]: data")
 
-ap.add_argument("-k", "--keyword", default = "california", type = str, help = "string, the keyword for which you wish to find collocates and calculate metrics. [DEFAULT]: california")
+ap.add_argument("-k", "--keyword", default = "california", type = str, help = "string, the keyword for which you wish to find collocates and calculate metrics. Needs to be lowercase. [DEFAULT]: california")
 
 ap.add_argument("-w", "--window_size", default = 2, type = int, help = "integer, collocate window-size. [DEFAULT]: 2")
 
