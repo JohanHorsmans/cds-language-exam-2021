@@ -61,7 +61,7 @@ This assignment is designed to test that you have a understanding of:
 <!-- METHODS -->
 ## Methods
 
-The problem of this assignment relates to mangling and processing date-time-data and calculating rolling sentiment scores for a large text corpus. I use pandas to convert the data to date-time format and arrange them in chronological order. To reduce run-time, I carry out the analysis on a subset of 100.000 randomly sampled headlnes. I use SpaCy text blob to calculate the sentiment-score for the headlines. I batch the data together with a batch-size of 500 to make the analysis run faster. I then calculate mean sentiment score for each week and month and plot the scores in two separate graphs (see _discussion of results_). Lastly, the script also writes a csv-file named _"sentiment.csv"_ with the score for each individual headline.
+The problem of this assignment relates to mangling and processing date-time-data and calculating rolling sentiment scores for a large text corpus. I used pandas to convert the data to date-time format and arrange the headlines in chronological order. To reduce run-time, I carried out the analysis on a subset of 100.000 randomly sampled headlnes. I used SpaCy text blob to calculate the sentiment-score for the headlines. After this, I batched the data together with a batch-size of 500 to make the analysis run faster. I then calculate mean sentiment score for each week and month and plot the scores in two separate graphs (see _discussion of results_). Lastly, the script also writes a csv-file named _"sentiment.csv"_ with the score for each individual headline.
 
 <!-- HOW TO RUN -->
 ## How to run
@@ -92,7 +92,7 @@ Furthermore, it holds the following files:
 <!-- DISCUSSION OF RESULTS -->
 ## Discussion of results
 
-Two plots are produced by the script. One for the weekly rolling sentiment score (figure 1) and one for the monthly rolling sentiment score (figure 2). The two plots show that the news data is generally positive (Sentiment score > 0) in spite of the fluctuations on a weekly/monthly basis. We see that the variance in sentiment scores is larger on a weekly basis than on a monthly basis, indicating that the variance seen from week to week is quite similar in both directions and thus, to a certain extent, cancels each other out when analysed on a monthly basis.
+Two plots are produced by the script. One for the weekly rolling sentiment score (_figure 1_) and one for the monthly rolling sentiment score (_figure 2_). The two plots show that the news data is generally slightly positive (Sentiment score > 0) in spite of the fluctuations on a weekly/monthly basis. We see that the variance in sentiment score is larger on a weekly basis than on a monthly basis, indicating that the variance seen from week to week is quite similar in both directions and thus, to a certain extent, cancel each other out when analysed on a monthly basis. I have limited the y-axis of the plot to go from -0.2 to 0.2 (the full scale goes from -1 to 1) which underlines that the  fluctuations seen in the plots are very small.
 
 
 <br />
