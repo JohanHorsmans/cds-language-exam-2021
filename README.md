@@ -106,9 +106,9 @@ cd {root directory (i.e. cds-lang-exam-2021)}
 cd assignment_2
 python3 collocation.py
 ```
-Type: ```python3 edge_detection.py -h``` for a detailed guide on how to specify script-parameters. 
+Type: ```python3 collocation.py -h``` for a detailed guide on how to specify script-parameters. 
 
-For more information, see [```assignment_2/README.md```](https://github.com/JohanHorsmans/cds-visual-exam-2021/tree/main/assignment_3)
+For more information, see [```assignment_2/README.md```](https://github.com/JohanHorsmans/cds-language-exam-2021/tree/main/assignment_2)
 
 ### Assignment 3 - Sentiment Analysis
 
@@ -118,9 +118,7 @@ cd {root directory (i.e. cds-lang-exam-2021)}
 cd assignment_3
 python3 sentiment.py
 ```
-Type: ```python3 edge_detection.py -h``` for a detailed guide on how to specify script-parameters. 
-
-For more information, see [```assignment_3/README.md```](https://github.com/JohanHorsmans/cds-visual-exam-2021/tree/main/assignment_3)
+For more information, see [```assignment_3/README.md```](https://github.com/JohanHorsmans/cds-language-exam-2021/tree/main/assignment_3)
 
 ### Assignment 5 - (Un)supervised Machine Learning
 
