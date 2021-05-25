@@ -94,7 +94,7 @@ _Keyword:_
 "-k", "--keyword"
 default = "california"
 type = str
-help = string, the keyword for which you wish to find collocates and calculate metrics.
+help = string, the keyword for which you wish to find collocates and calculate metrics. Needs to be lowercase. 
 ```
 
 _Window size:_
