@@ -124,7 +124,7 @@ Furthermore, it holds the following files:
 <!-- DISCUSSION OF RESULTS -->
 ## Discussion of results
 
-I succeeded in creating a script that calculates various collocate-metrics for specific keywords and window-sizes. Furthermore, I solved the bonus assignment by making it possible to specify script-parameters from the terminal.
+I succeeded in creating a script that calculates various collocate-metrics for specific keywords and window-sizes and automatically saves selected metrics in a .csv-file. Furthermore, I solved the bonus assignment by making it possible to specify script-parameters from the terminal.
 
 
 <br />
