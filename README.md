@@ -126,7 +126,7 @@ Go through the following steps to run assignment 5:
 ```bash
 cd {root directory (i.e. cds-lang-exam-2021)}
 cd assignment_5
-python3 hate_class.py
+python3 HateClass.py
 ```
 For more information, see [```assignment_5/README.md```](https://github.com/JohanHorsmans/cds-language-exam-2021/tree/main/assignment_5)
 
