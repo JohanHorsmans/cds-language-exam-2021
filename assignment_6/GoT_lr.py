@@ -29,6 +29,7 @@ random.seed(10)
 # Define the main function of the script:
 def main():
     
+    print("[INFO]: Loading and preprocessing data")
     # Define path to the dataset:
     filename = os.path.join("data", "Game_of_Thrones_Script.csv")
 
@@ -46,7 +47,8 @@ def main():
                                                         test_size=0.25, # Specify that 25% of the data should be added to the test-set.
                                                         random_state=24) # Set random state for reproducibility.
     
-    # Define that I want to use TF-IDF vectorization:
+    # Vectorizing to make lowercased unigrams and bigrams with tf-idf transformation and remove 
+    #-frequently used words:
     vectorizer = TfidfVectorizer(ngram_range = (1,2),
                                  lowercase =  True,
                                  max_df = 0.95)
@@ -57,12 +59,14 @@ def main():
     # Vectorize Test data
     X_test_feats = vectorizer.transform(X_test)
         
+    print("[INFO]: Training and testing Logistic Regression model")
     # Fit Logistic Regression model:
     lr_classifier = LogisticRegression(random_state=24).fit(X_train_feats, y_train)
 
     # Predict the testing-data using the fitted Logistic Regression model
     lr_predictions = lr_classifier.predict(X_test_feats)
     
+    print("[INFO]: Classification matrix:")
     # Print classification matrix to the terminal:
     print(classification_report(y_test, lr_predictions))
     
