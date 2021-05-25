@@ -63,7 +63,7 @@ This assignment is designed to test that you have an understanding of:
 
 <!-- METHODS -->
 ## Methods
-The problem of the assignment relates to classifying complex textual data using, respectively, a logistic regression- and a deep learning classifier. For both models, I preprocess the data and split it into a training- and testing set (with 25% of the sentences allocated to the testing-set). For the logistic regression classifier, I use the LogisticRegression-model from the sklearn.linear_model module. For the deep learning classifier, I utilize the pretrained GloVe-word embeddings. 
+The problem of the assignment relates to classifying complex textual data using, respectively, a logistic regression- and a deep learning classifier. For both models, I preprocess the data and split it into a training- and testing set (with 25% of the sentences allocated to the testing-set). For the logistic regression classifier, I use the LogisticRegression-model from the sklearn.linear_model module. For the deep learning classifier, I utilize the pretrained [_GloVe word-embeddings_](https://nlp.stanford.edu/projects/glove/). 
 
 A word embedding is essentially just a large vector representing words’ location in an abstract word-space, where closely related words will be placed close to each other. Such a mathematical representation of words, conceptually, means that if one, e.g., used the word embedding for king and subtracted the embedding for man and added the embedding for woman, one would end up with the word embedding for queen, i.e.:
 
@@ -71,9 +71,9 @@ A word embedding is essentially just a large vector representing words’ locati
     king - man + woman = queen
 </p>
 
-The reason for using these embeddings is that this representation of language and how words relate to each should allow my model to make more accurate predictions. By understanding how words relate to one another, the model can infer how the classification of some words/sentences can generalize to other similar words/sentences. This is a process known as transfer learning. As such, all it takes to utilize the pre-trained embeddings on a classification task, such as this, is to add an untrained neural network to the end of the pretrained embedding layer. 
+The reason for using these embeddings is that this representation of language and how words relate to each should allow my model to make more accurate predictions. By understanding how words relate to one another, the model can infer how the classification of some words/sentences can generalize to other similar words/sentences. This is a process known as transfer learning. All it takes to utilize the pre-trained embeddings on a classification task, such as this, is to add an untrained neural network to the end of the pretrained embedding layer. 
 
-The neural network that I added consisted of the following; a convolutional layer with ReLU-activation, a max-pooling layer, a dense layer with 10 neurons and ReLU-activation and an output layer with 8 nodes; 1 for each class.
+The neural network that I added consisted of the following; a convolutional layer with ReLU-activation, a max-pooling layer, a dense layer with 128 neurons and ReLU-activation and an output layer with 8 nodes (1 for each class).
 
 For the deep learning model, I made it possible to specify training epochs and embedding-dimensions from the terminal using argparse.
 
@@ -113,7 +113,7 @@ help = "int, the size of the word embeddings loaded from the the GloVe-model. Op
 <!-- REPOSITORY STRUCTURE AND CONTENTS -->
 ## Repository structure and contents
 
-This repository contains the following folders:
+This repository contains the following folder:
 
 |Folder|Description|
 |:--------|:-----------|
@@ -129,7 +129,7 @@ Furthermore, it holds the following files:
 <!-- DISCUSSION OF RESULTS -->
 ## Discussion of results
 
-For the logistic regression model, I achieved a macro F1-score of xx. For the deep-learning model, I achieved a macro F1-score of xx after training for 50 epochs using a word embedding size of 300 features.   
+For the logistic regression model, I achieved a macro F1-score of 0.25. For the deep-learning model, I achieved a macro F1-score of 0.20 after training for 50 epochs using a word embedding size of 300 features. These results are not impressive but they act as a nice illustration of the complexity of the task. To improve results, I hypothesize that it would be beneficial to use word enitity recognition to extract the names present in the sentence and use that as a predictor of the season. Especially for a show such as Game of Thrones where many characters die in every season, I believe that this could greatly improve results.
 
 <br />
 <p align="center">
