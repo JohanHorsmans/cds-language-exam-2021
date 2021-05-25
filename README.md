@@ -92,7 +92,6 @@ Furthermore, it holds the following files:
 |:--------|:-----------|
 ```create_lang_venv.sh``` | A bash script that generates a new virtual environment called "lang_venv" with all the packages specified in the ```requirements.txt```-file.
 ```delete_lang_venv.sh``` | A bash script that deletes the generated "lang_venv" virtual environment.
-```data_download.sh``` | A bash-script that automatically downloads all data and creates the necessary folder structure that is needed to run the assignments.
 ```requirements.txt``` | A txt-file containing a list of the packages (and versions) that are needed for the virtual environment.
 ```README.md``` | The README file that you are currently reading.
 
