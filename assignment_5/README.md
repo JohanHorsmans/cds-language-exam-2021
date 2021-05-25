@@ -82,7 +82,7 @@ OffensEval2020 was a competition where researchers and data scientists from all 
 
 The best team in the Danish task achieved a macro F1-score of 0.8119 and the worst team achieved a score of 0.4913. For the full paper, see: https://arxiv.org/pdf/2006.07235.pdf
 
-We wanted to create a text classifier that could classify offensive comments in Danish and compare our macro F1-score with the results from the OffensEval2020 competition.
+We wanted to create a text classifier that could classify offensive comments in Danish and compare our macro F1-score with the results from the OffensEval2020 competition. We found this task interesting due to the amount of media coverage on Danish hate speech on social media in recent months. We believe that a robust hate-speech classifier could be a very valuable tool for moderating the tone and retoric of the public debate to make it more constructive.   
 
 We trained the following models: Logistic Regression, Support Vector Machine, Neural Network, Random Forest & Decision Tree (see code for further specifications). We also combined them in an ensemble where a mix of majority vote- and average ensembling was employed (see code for specifications). We have chosen to use macro F1-score as our metric:
 
@@ -97,14 +97,14 @@ __NOTICE:__ To run the assignment, you need to have configured and activated you
 
 Go through the following steps to run assignment 5:
 ```bash
-cd {root directory (i.e. cds-language-exam-2021}
+cd {root directory (i.e. cds-language-exam-2021)}
 cd assignment_5
 python3 HateClass.py
 ```
 <!-- REPOSITORY STRUCTURE AND CONTENTS -->
 ## Repository structure and contents
 
-This repository contains the following folders:
+This repository contains the following folder:
 
 |Folder|Description|
 |:--------|:-----------|
@@ -119,7 +119,9 @@ Furthermore, it holds the following files:
 <!-- DISCUSSION OF RESULTS -->
 ## Discussion of results
 
-Our best performing model was our ensemble containing all models, which achieved a macro F1-score of 0.71. It is important to note that the dataset is heavily skewed towards non-offensive comments, so the macro F1-score should be taken with a grain of salt. Nonetheless it would have ranked as the 23rd best model (out of 38) in the OffensEval2020 competition, so we deem it to be quite successful when taking the circumstances into account. For an even better model, see our [self-assigned project](https://github.com/JohanHorsmans/cds-language-exam-2021/tree/main/self_assigned), where we achieve a macro F1-score of XX on the same dataset.
+Our best performing model was our ensemble containing all models, which achieved a macro F1-score of 0.71. It is important to note that the dataset is heavily skewed towards non-offensive comments, so the macro F1-score should be taken with a grain of salt. The skewed data is also reflected in our model predictions, where the F1-score was much higher for non-offensive comments compared to offensive ones (0.95 vs. 0.46). We believe that this bias towards non-offensive comments, might very well reflect the imbalanced nature of the dataset. It defeats the purpose of a hate-speech classifier if it categorizes such a large proportion of hate as non-offensive and, as such, we argue that there is still a lot of work to be done in spite of the seemingly honorable F1-score of 0.71
+
+Nonetheless it would have ranked as the 23rd best model (out of 38) in the OffensEval2020 competition, so we deem it to be quite successful when taking the circumstances into account. For an even better model, see our [self-assigned project](https://github.com/JohanHorsmans/cds-language-exam-2021/tree/main/self_assigned), where we achieve a macro F1-score of 0.78 on the same dataset.
 
 <br />
 <p align="center">
