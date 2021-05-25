@@ -32,7 +32,7 @@
         <li><a href="#assignment-3---sentiment-analysis">Assignment 3 - Sentiment Analysis</a></li>
         <li><a href="#assignment-5---(un)supervised-machine-learning">Assignment 5 - (Un)supervised Machine Learning</a></li>
         <li><a href="#assignment-6---text-classification-using-deep-learning">Assignment 6 - Text classification using Deep Learning</a></li>
-        <li><a href="#self-assigned-project---hate-speech-detection">Self-assigned project - Hate Speech Detection</a></li>
+        <li><a href="#self-assigned-project---danish-hate-speech-detection">Self-assigned project - Danish hate speech detection</a></li>
       </ul>
     </li>
     <li><a href="#license">License</a></li>
@@ -52,7 +52,7 @@ The assignments included in this portfolio are the following:
 * Assignment 3 - _Sentiment Analysis_
 * Assignment 5 - _(Un)supervised Machine Learning_
 * Assignment 6 - _Text classification using Deep Learning_
-* Self-assigned project - _Creating fake Monet-images with style transfer and classifying them with CNN’s_
+* Self-assigned project - _Danish hate speech detection_
 
 <!-- HOW TO RUN -->
 ## Setting Up Virtual Environment And Downloading Data
@@ -144,7 +144,7 @@ Type: ```python3 GoT-dl.py -h``` for a detailed guide on how to specify script-p
 
 For more information, see [```assignment_6/README.md```](https://github.com/JohanHorsmans/cds-visual-exam-2021/tree/main/assignment_4)
 
-### Self-assigned project - Creating fake Monet-images with style transfer and classifying them with CNN's
+### Self-assigned project - Danish hate speech detection
 
 To run the self-assigned assignment, go the the "self_assigned.ipynb"-notebook in the "self_assigned"-folder.
 
