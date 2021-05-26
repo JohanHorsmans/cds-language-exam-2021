@@ -26,7 +26,7 @@ import math
 # Define function argument defaults and how to specify them from the terminal:
 ap = argparse.ArgumentParser(description = "[DESCRIPTION]: A function designed to calculate collocates and metrics for a specific keyword across a text-corpus. The following argument can be specified but you can also run the code with default parameters:")
 
-ap.add_argument("-f", "--filepath", default = "data", type = str, help = "string, path to text-corpus. Texts need to be .txt-files. Be wary of difference in operating systems in terms of spcifying path with \" / \" or \" \ \" [DEFAULT]: data")
+ap.add_argument("-f", "--filepath", default = "data", type = str, help = "string, path to text-corpus. Texts need to be .txt-files. Be wary of difference in operating systems in terms of specifying path with \" / \" or \" \ \" [DEFAULT]: data")
 
 ap.add_argument("-k", "--keyword", default = "california", type = str, help = "string, the keyword for which you wish to find collocates and calculate metrics. Needs to be lowercase. [DEFAULT]: california")
 
