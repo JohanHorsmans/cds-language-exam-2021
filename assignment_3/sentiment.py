@@ -33,11 +33,13 @@ def main():
             os.makedirs("out")
 
     print("[INFO]: Loading data")
-    # Loading data
+    
+    # Loading data:
     in_file = os.path.join("data", "abcnews-date-text.csv") # Specify path to data.
     headlines = pd.read_csv(in_file) # Read the .csv-file as a dataframe called 'headlines'.
 
     print("[INFO]: Preprocessing data")
+    
     # Preprocessing:
     headlines['publish_date'] = pd.to_datetime(headlines.publish_date, format="%Y%m%d") # Converting the publish_date to a datetime format. Following the output above I specify that the dates are arranged as years, months, days (%Y%m%d). Y is upper case since the year is specified with century (i.e. four numbers).  
     
@@ -65,16 +67,13 @@ def main():
     mean_month = headlines.resample("m",on ="publish_date").mean()
 
     print("[INFO]: Making plots")
+    
     # Make plot of the weekly rolling mean of sentiment scores:
     week_plot = mean_week.plot(
         ylabel = "Sentiment Score", # Define the label for the y-axis.
         xlabel = "Date", # Define the label for the x-axis.
         ylim = (-0.2,0.2), # Set the window size on the y-axis.
         title = "Weekly rolling mean of sentiment scores") # Set plot title
-
-    # Save week_plot:
-    mean_week_plot = week_plot.get_figure()
-    mean_week_plot.savefig(os.path.join("out", "mean_week_plot"))
 
     # Make plot of the monthly rolling mean of sentiment scores:
     month_plot = mean_month.plot(
@@ -84,6 +83,10 @@ def main():
         title = "Monthly rolling mean of sentiment scores") # Set plot title
     
     print("[INFO]: Saving plots")
+    
+    # Save week_plot:
+    mean_week_plot = week_plot.get_figure()
+    mean_week_plot.savefig(os.path.join("out", "mean_week_plot"))
     
     # Save month_plot:
     mean_month_plot = month_plot.get_figure()
