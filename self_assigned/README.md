@@ -44,7 +44,7 @@ For our self-assigned project, we wish to see if we can improve the Danish hate-
 
 In assignment 5, we achieved a macro F1-score of 0.71. The current state-of-the-art, as described in [_OffensEval2020_](https://arxiv.org/pdf/2006.07235.pdf), achieves a macro F1-score of 0.81. Our goal with this project is to build a competing state-of-the-art model with similar performance and make it openly available by uploading it, as the first Danish hate speech detection model, to [_huggingface_](huggingface.co). We wish to do this using the [_Nordic Bert_](https://github.com/botxo/nordic_bert)-architecture by [_BotXO_](https://www.botxo.ai/en/blog/danish-bert-model/). 
 
-Following this we are going to build a .py-script and a Jupyter notebook designed to easily help users deploy the model from huggingface on their own data. This is advantageous, since it takes a long time to train a BERT-model for classification tasks. Using our pretrained model from huggingface, will make it easier and much less time-consuming to implement hate speech moderation for various media-sites and firms who wish to combat Danish hate speech on their online platforms. To improve usability, we will make the model compatible with both a _tensorflow_- and _pytorch_ framework
+Following this we are going to build a .py-script that can be employed for hate speech classification on ones own dataset. Furthermore, we are creating a Jupyter notebook acting as a tutorial to easily help users deploy the model from huggingface on their own data. Using our model huggingface-model will be advantageous, since it takes a long time to train a BERT-model for classification tasks. Using our pretrained model from huggingface, will make it easier and much less time-consuming to implement hate speech moderation for various media-sites and firms who wish to combat Danish hate speech on their online platforms. To improve usability, we will make the model compatible with both a _tensorflow_- and _pytorch_ framework
 
 In summary, the project is comprised of the following steps:
 1. Train and test a Nordic Bert-model on the official OffensEval2020-dataset
@@ -89,12 +89,49 @@ __NOTICE:__ To run the assignment, you need to have configured and activated you
 
 To evaluate the model, you can either refer to the _dk_hate_detect.py_-script or the _dk_hate_detect.ipynb_-notebook. Both contain the same information.
 
-To run the script go through the following steps:
+To run the script go through the following steps (__NOTE:__ you have to specify either the _--text_-argument or the _--data_ and _--column_-arguments to run the script):
 ```bash
 cd {root directory (i.e. cds-language-exam-2021)}
 cd self_assigned
 python3 dk_hate_detect.py
 ```
+
+__You can specify the following arguments from the terminal:__
+
+_Data path:_
+```bash
+"--data", 
+required = False, 
+default = None,
+help = "Path to the a dataset in csv format"
+```
+
+_Column:_
+```bash
+"--column"
+required = False
+default = None,
+help = "name of column including text for hatespeech detection "
+```
+
+_Single string classification:_
+```bash
+"--text"
+required = False, 
+default = None
+type = str
+help = "string for single string hatespeech detection"
+```
+
+_Output:_
+```bash
+"--output"
+required = False
+type = str, default = "./"
+help = "output path for dataset with hatespeech column"
+```
+
+You can also type: ```python3 dk_hate_detect.py -h``` for a detailed guide on how to specify script-arguments. 
 
 Go through the following steps to run the notebook:
 
