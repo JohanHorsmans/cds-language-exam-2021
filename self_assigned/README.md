@@ -72,7 +72,7 @@ We trained the the BERT model for 10-epochs with the following hyperparameters:
 * Batch size: 16
 * Max sequence length: 128
 
-We ran- and developed the code on [_Google Colaboratory_](https://colab.research.google.com/?utm_source=scs-index).
+We ran- and developed the code on [_Google Colaboratory_](https://colab.research.google.com/?utm_source=scs-index). For our model-training notebook, please see: "_dk_hate_training.ipynb_"
 
 Our uploaded model can be found here, on huggingface.co: https://huggingface.co/Guscode/DKbert-hatespeech-detection
 
@@ -149,7 +149,9 @@ Furthermore, it holds the following files:
 |:--------|:-----------|
 ```dk_hate_detect.py``` | The python script for the assignment.
 ```dk_hate_detect.ipynb``` | The Jupyter notebook for the assignment.
+```dk_hate_training.ipynb``` | The Jupyter notebook we created when training the model.
 ```README.md``` | The README file that you are currently reading.
+
 
 
 <!-- DISCUSSION OF RESULTS -->
