@@ -81,7 +81,7 @@ This repository contains the following folder:
 
 |Folder|Description|
 |:--------|:-----------|
-```data/``` | Folder containing a dataset consisting over a million headlines taken from the Australian news source ABC (Start Date: **2003-02-19** ; End Date: **2020-12-31**)
+```data/``` | Folder containing a dataset containing over a million headlines taken from the Australian news source ABC (Start Date: **2003-02-19** ; End Date: **2020-12-31**)
 
 Furthermore, it holds the following files:
 |File|Description|
