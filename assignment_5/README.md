@@ -113,7 +113,7 @@ This repository contains the following folder:
 Furthermore, it holds the following files:
 |File|Description|
 |:--------|:-----------|
-```HateClass.py``` | The python script for the assignment
+```HateClass.py``` | The python script for the assignment.
 ```README.md``` | The README file that you are currently reading.
 
 <!-- DISCUSSION OF RESULTS -->
