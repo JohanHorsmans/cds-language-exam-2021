@@ -119,7 +119,7 @@ This repository contains the following folder:
 
 |Folder|Description|
 |:--------|:-----------|
-```data/``` | Folder containing a csv-file with the script from every eeason of _Game of Thrones_.
+```data/``` | Folder containing a csv-file with the script from every season of _Game of Thrones_.
 
 Furthermore, it holds the following files:
 |File|Description|
