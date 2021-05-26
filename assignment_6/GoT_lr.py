@@ -30,20 +30,21 @@ random.seed(10)
 def main():
     
     print("[INFO]: Loading and preprocessing data")
+    
     # Define path to the dataset:
     filename = os.path.join("data", "Game_of_Thrones_Script.csv")
 
-    # Read the data and save it as a variable called "GoT".
+    # Read the data and save it as a variable called "GoT":
     GoT = pd.read_csv(filename)
 
-    # Save the "Sentence"-column from the GoT-data and save it as a variable called "sentences"
+    # Save the "Sentence"-column from the GoT-data and save it as a variable called "sentences":
     sentences = GoT["Sentence"].values
     
-    # Save the "Season"-column from the GoT-data and save it as a variable called "labels"
+    # Save the "Season"-column from the GoT-data and save it as a variable called "labels":
     labels = GoT["Season"].values
     
-    X_train, X_test, y_train, y_test = train_test_split(sentences, # X-input
-                                                        labels, # y-input
+    X_train, X_test, y_train, y_test = train_test_split(sentences, # X-input.
+                                                        labels, # y-input.
                                                         test_size=0.25, # Specify that 25% of the data should be added to the test-set.
                                                         random_state=24) # Set random state for reproducibility.
     
@@ -53,17 +54,18 @@ def main():
                                  lowercase =  True,
                                  max_df = 0.95)
     
-    # Vectorize Training data
+    # Vectorize Training data:
     X_train_feats = vectorizer.fit_transform(X_train)
     
-    # Vectorize Test data
+    # Vectorize Test data:
     X_test_feats = vectorizer.transform(X_test)
         
     print("[INFO]: Training and testing Logistic Regression model")
+    
     # Fit Logistic Regression model:
     lr_classifier = LogisticRegression(random_state=24).fit(X_train_feats, y_train)
 
-    # Predict the testing-data using the fitted Logistic Regression model
+    # Predict the testing-data using the fitted Logistic Regression model:
     lr_predictions = lr_classifier.predict(X_test_feats)
     
     print("[INFO]: Classification matrix:")
