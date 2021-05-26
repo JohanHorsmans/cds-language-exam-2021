@@ -12,7 +12,7 @@
   <p align="center">
     Johan Kresten Horsmans
     <br />
-    <a href="https://github.com/JohanHorsmans/cds-language-exam-2021.pdf"><strong>Link to portfolio descriptions »</strong></a>
+    <a href="https://github.com/JohanHorsmans/cds-language-exam-2021/blob/main/Language_Analytics_Exam.pdf"><strong>Link to portfolio descriptions »</strong></a>
     <br />
   </p>
 </p>
