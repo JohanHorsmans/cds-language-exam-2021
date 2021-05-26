@@ -24,7 +24,6 @@ Danish hate speech detection</h3>
   <ol>
     <li><a href="#contribution">Contribution</a></li>
     <li><a href="#official-description-from-instructor">Official description from instructor</a></li>
-    <li><a href="#contribution">Contribution</a></li>
     <li><a href="#methods">Methods</a></li>
     <li><a href="#how-to-run">How to run</a></li>
     <li><a href="#repository-structure-and-contents">Repository structure and contents</a></li>
@@ -34,7 +33,7 @@ Danish hate speech detection</h3>
 
 <!-- CONTRIBUTION -->
 ## Contribution
-I have made and designed the project assignment with [Gustav Aarup Lauridsen](https://github.com/Guscode). Gustav and I contributed equally to every stage of this project from initial conception and implementation, through the production of the final output and structuring of the repository. (50/50%)
+This project is created in collaboration between [Gustav Aarup Lauridsen](https://github.com/Guscode) and [Johan Kresten Horsmans](https://github.com/JohanHorsmans). Both have contributed equally to every stage of this project from initial conception and implementation, through the production of the final output and structuring of the repository. (50/50%)
 
 <!-- OFFICIAL DESCRIPTION FROM INSTRUCTOR -->
 ## Project description
@@ -50,10 +49,6 @@ In summary, the project is comprised of the following steps:
 1. Train and test a Nordic Bert-model on the official OffensEval2020-dataset
 2. Upload the trained model to huggingface.co
 3. Create a Jupyter notebook and .py-script designed to help users deploy the model on their own data.
-
-<!-- CONTRIBUTION -->
-## Contribution
-This project is created in collaboration between [Gustav Aarup Lauridsen](https://github.com/Guscode) and [Johan Kresten Horsmans](https://github.com/JohanHorsmans). Both have contributed equally to every stage of this project from initial conception and implementation, through the production of the final output and structuring of the repository. (50/50%)
 
 <!-- METHODS -->
 ## Methods
