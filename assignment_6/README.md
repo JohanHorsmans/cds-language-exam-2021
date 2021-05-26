@@ -71,7 +71,7 @@ Word embeddings are basically a big vector representation of how words are locat
     king - man + woman = queen
 </p>
 
-The reason for using these embeddings is that this representation of how words are related to one another should help my model make better predictions. By computing how different words relate to each other, the model can potentially infer how classifications of some sentences can extend to other similar sentences. This is a phenomenon referred to as as transfer learning. To utilize the pre-trained embeddings on a classification task, such as this, one needs to add a neural network to the end of the GloVe embedding layer. 
+The reason for using these embeddings is that this representation of how words are related to one another should help my model make better predictions. By computing how different words relate to each other, the model can potentially infer how classifications of some sentences can extend to other similar sentences. This is a phenomenon referred to as transfer learning. To utilize the pre-trained embeddings on a classification task, such as this, one just needs to add a neural network to the end of the GloVe embedding layer. 
 
 The neural network that I added consisted of the following; a convolutional layer with ReLU-activation, a max-pooling layer, a dense layer with 128 neurons and ReLU-activation and an output layer with 8 nodes (1 for each class).
 
