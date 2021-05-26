@@ -121,7 +121,7 @@ Furthermore, it holds the following files:
 <!-- DISCUSSION OF RESULTS -->
 ## Discussion of results
 
-Our model achieved a macro F1-score of 0.78. As stated earliner, the previously best performing Danish model achieved a macro F1-score of 0.81 (as described in OffensEval2020). As such, we have not quite built the new gold-standard model for hate speech detection in Danish. Nonetheless, we have come very close, and our model would have finished 4th place (out of 38 contenders) in the OffensEval2020 competition. Furthermore, it is important to note that we have created the best __publically__ available model + a thorough tutorial. Therefore, we argue that we have greatly improved the field of Danish hate speech detection in terms of increasing the possibilities of an actual real-life implementation of such an algorithm.  
+Our model achieved a macro F1-score of 0.78. As stated earlier, the currently best performing Danish model achieved a macro F1-score of 0.81 (as described in OffensEval2020). As such, we have not quite built the new gold-standard model for hate speech detection in Danish. Nonetheless, we have come very close, and our model would have finished 4th place (out of 38 contenders) in the OffensEval2020 competition. Furthermore, it is important to note that we have created the best __publically__ available Danish hate speech + a thorough tutorial for how to use it. Therefore, we argue that we have greatly improved the field of Danish hate speech detection in terms of increasing the possibilities of an actual real-life implementation of such an algorithm. 
 
 <br />
 <p align="center">
