@@ -129,7 +129,7 @@ Furthermore, it holds the following files:
 <!-- DISCUSSION OF RESULTS -->
 ## Discussion of results
 
-For the logistic regression model, I achieved a macro F1-score of 0.25. For the deep-learning model, I achieved a macro F1-score of 0.20 after training for 50 epochs using a word embedding size of 300 features. These results are not impressive but they act as a nice illustration of the complexity of the task. To improve results, I hypothesize that it would be beneficial to use word enitity recognition to extract the names present in the sentence and use that as a predictor of the season. Especially for a show such as Game of Thrones where many characters die in every season, I believe that this could greatly improve results.
+For the logistic regression model, I achieved a macro F1-score of 0.25. For the deep-learning model, I achieved a macro F1-score of 0.20 after training for 50 epochs using a word embedding size of 300 features. These results are not impressive but they act as a nice illustration of the complexity of the task. To improve results, I hypothesize that it would be beneficial to use word enitity recognition to extract the names present in the sentences and use that as a predictor of the season. Especially for a show such as Game of Thrones where many characters die in every season, I believe that this could greatly improve results.
 
 <br />
 <p align="center">
