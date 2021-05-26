@@ -113,13 +113,15 @@ This repository contains the following folder:
 Furthermore, it holds the following files:
 |File|Description|
 |:--------|:-----------|
-```HateClass.py``` | The python script for the assignment
+```dk_hate_detect.py``` | The python script for the assignment.
+```dk_hate_detect.ipynb``` | The Jupyter notebook for the assignment.
 ```README.md``` | The README file that you are currently reading.
+
 
 <!-- DISCUSSION OF RESULTS -->
 ## Discussion of results
 
-For model 1 (original dataset), we achieved a macro F1-score of xx after training for x epochs. For model 2 (expanded dataset), we achieved a macro F1-score of XX. The previously highest performing Danish model achieved a macro F1-score of 0.81 (as described in OffensEval2020). As such, we argue that we have built a new gold-standard model for hate speech detection in Danish. To help facilitate the implementation of the model in real-life scenarios, we have designed a .py-script and a Jupyter notebook with guides for how to run the model on new data. Furthermore, we have released our expanded dataset in this repository and, thus, created the largest publically available dataset of Danish hate speech.
+Our model achieved a macro F1-score of 0.78. As stated earliner, the previously best performing Danish model achieved a macro F1-score of 0.81 (as described in OffensEval2020). As such, we have not quite built the new gold-standard model for hate speech detection in Danish. Nonetheless, we have come very close, and our model would have finished 4th place (out of 38 contenders) in the OffensEval2020 competition. Furthermore, it is important to note that we have created the best __publically__ available model + a thorough tutorial. Therefore, we argue that we have greatly improved the field of Danish hate speech detection in terms of increasing the possibilities of an actual real-life implementation of such an algorithm.  
 
 <br />
 <p align="center">
