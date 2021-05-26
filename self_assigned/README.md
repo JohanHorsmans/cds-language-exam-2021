@@ -82,7 +82,7 @@ Our uploaded model can be found here, on huggingface.co: https://huggingface.co/
 
 __NOTICE:__ To run the assignment, you need to have configured and activated your virtual environment. See the main [README](https://github.com/JohanHorsmans/cds-language-exam-2021/blob/main/README.md) for a guide on how to do this.
 
-To evaluate the model, you can either refer to the _dk_hate_detect.py_-script or the _dk_hate_detect.ipynb_-notebook. Both contain the same information.
+To evaluate the model, please refer to the _dk_hate_detect.py_-script, since this is the main tool. The _dk_hate_detect.ipynb_-notebook is mainly designed as a tutorial for non-expert users. Both contain the same model.
 
 To run the script go through the following steps (__NOTE:__ you have to specify either the _--text_-argument or the _--data_ and _--column_-arguments to run the script):
 ```bash
