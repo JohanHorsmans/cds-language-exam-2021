@@ -91,7 +91,7 @@ cd self_assigned
 python3 dk_hate_detect.py
 ```
 
-__You can specify the following arguments from the terminal:__
+__You can specify the following arguments from the terminal in the ```dk_hate_detect.py```-script:__
 
 _Data path:_
 ```bash
