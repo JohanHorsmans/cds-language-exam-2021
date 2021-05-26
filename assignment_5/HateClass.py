@@ -30,6 +30,7 @@ random.seed(10)
 def main():
     
     print("[INFO]: Loading and preprocessing data")
+    
     # Specify filepaths to load training- and testing data:
     filepath = os.path.join("data","Train_Hate.tsv")
     filepath_test = os.path.join("data", "Test_Hate.tsv")
@@ -66,7 +67,8 @@ def main():
     feature_names = vectorizer.get_feature_names()
     
     
-    print("[INFO]: Building, training and testing models")
+    print("[INFO]: Building-, training- and testing models")
+    
     # Build classifiers:
     
     # LOGISTIC REGRESSION:
