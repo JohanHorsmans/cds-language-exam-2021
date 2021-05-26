@@ -88,7 +88,7 @@ _Custom filepath:_
 "-f", "--filepath"
 default = "data"
 type = str
-help = string, path to text-corpus. Texts need to be .txt-files. Be wary of difference in operating systems in terms of spcifying path with "/" or "\".
+help = string, path to text-corpus. Texts need to be .txt-files. Be wary of difference in operating systems in terms of specifying path with "/" or "\".
 ```
 
 _Keyword:_
