@@ -75,6 +75,8 @@ The reason for using these embeddings is that this representation of language an
 
 The neural network that I added consisted of the following; a convolutional layer with ReLU-activation, a max-pooling layer, a dense layer with 128 neurons and ReLU-activation and an output layer with 8 nodes (1 for each class).
 
+For the Logistic Regression model i vectorize the data and transfrom it to lowercased unigrams and bigrams with tf-idf transformation. For the Deep Learning model i binarize the labels and tokenize the text. I then convert the data to an embeding matrix with either 50, 100, 200 or 300 dimensions (specified as an argument from the terminal).
+
 For the deep learning model, I made it possible to specify training epochs and embedding-dimensions from the terminal using argparse.
 
 I have decided to use the macro F1-score as my evaluation metric. For the reason behind this, please refer to [assignment 5, methods](https://github.com/JohanHorsmans/cds-language-exam-2021/tree/main/assignment_5#methods).
