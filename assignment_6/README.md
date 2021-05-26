@@ -65,13 +65,13 @@ This assignment is designed to test that you have an understanding of:
 ## Methods
 The problem of the assignment relates to classifying complex textual data using, respectively, a logistic regression- and a deep learning classifier. For both models, I preprocess the data and split it into a training- and testing set (with 25% of the sentences allocated to the testing-set). For the logistic regression classifier, I use the LogisticRegression-model from the sklearn.linear_model module. For the deep learning classifier, I utilize the pretrained [_GloVe word-embeddings_](https://nlp.stanford.edu/projects/glove/). 
 
-A word embedding is essentially just a large vector representing words’ location in an abstract word-space, where closely related words will be placed close to each other. Such a mathematical representation of words, conceptually, means that if one, e.g., used the word embedding for king and subtracted the embedding for man and added the embedding for woman, one would end up with the word embedding for queen, i.e.:
+Word embeddings are basically a big vector representation of how words are located in an abstract word-space, where related entities are placed in close proximity of each other. Such a vector representation implies (conceptually) that if one, for example, took the embedding for the word king and subtracted the embedding for the word man and followingly added the embedding for woman, one should be left with the embedding for the word queen, i.e.:
 
 <p align="center">
     king - man + woman = queen
 </p>
 
-The reason for using these embeddings is that this representation of language and how words relate to each should allow my model to make more accurate predictions. By understanding how words relate to one another, the model can infer how the classification of some words/sentences can generalize to other similar words/sentences. This is a process known as transfer learning. All it takes to utilize the pre-trained embeddings on a classification task, such as this, is to add an untrained neural network to the end of the pretrained embedding layer. 
+The reason for using these embeddings is that this representation of how words are related to one another should help my model make better predictions. By computing how different words relate to each other, the model can potentially infer how classifications of some sentences can extend to other similar sentences. This is a phenomenon referred to as as transfer learning. To utilize the pre-trained embeddings on a classification task, such as this, one needs to add a neural network to the end of the GloVe embedding layer. 
 
 The neural network that I added consisted of the following; a convolutional layer with ReLU-activation, a max-pooling layer, a dense layer with 128 neurons and ReLU-activation and an output layer with 8 nodes (1 for each class).
 
