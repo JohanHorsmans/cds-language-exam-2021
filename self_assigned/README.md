@@ -24,6 +24,7 @@ Danish hate speech detection</h3>
   <ol>
     <li><a href="#contribution">Contribution</a></li>
     <li><a href="#official-description-from-instructor">Official description from instructor</a></li>
+    <li><a href="#contribution">Contribution</a></li>
     <li><a href="#methods">Methods</a></li>
     <li><a href="#how-to-run">How to run</a></li>
     <li><a href="#repository-structure-and-contents">Repository structure and contents</a></li>
@@ -39,58 +40,67 @@ I have made and designed the project assignment with [Gustav Aarup Lauridsen](ht
 ## Project description
 
 ### Danish hate speech detection
-For our self-assigned project, we wish to see if we can improve the Danish hate-speech detection algorithm that we designed for assignment 5. Here, we achieved a macro F1-score of 0.71. The current state-of-the-art, as described in [_OffensEval2020_](https://arxiv.org/pdf/2006.07235.pdf), achieves a macro F1-score of 0.81. Our goal with this project is to beat this score and build a new state-of-the-art model. We wish to do this using the new [_Ælæctra_](https://github.com/MalteHB/-l-ctra)-architecture. First, we wish to train an Ælektra-model on the official OffensEval2020-dataset (model 1). Followingly, we want to see if we can improve the model's classifications by expanding the training dataset by machine translating comments from an English hate-speech-dataset to Danish and then train an Ælæktra-model on this expanded dataset (model 2).
+For our self-assigned project, we wish to see if we can improve the Danish hate-speech detection algorithm that we designed for assignment 5. Here, we achieved a macro F1-score of 0.71. The current state-of-the-art, as described in [_OffensEval2020_](https://arxiv.org/pdf/2006.07235.pdf), achieves a macro F1-score of 0.81. Our goal with this project is to build a competing state-of-the-art model with similar performance and make it openly available by uploading it, as the first Danish hate speech detection model, to [_huggingface_](huggingface.co). We wish to do this using the [_Nordic Bert_](https://github.com/botxo/nordic_bert)-architecture by [_BotXO_](https://www.botxo.ai/en/blog/danish-bert-model/). 
 
-Following this we are going to upload the best-performing model to [_huggingface_](huggingface.co) and build a .py-script and a Jupyter notebook designed to easily help users deploy the model from huggingface on their own data. 
+Following this we are going to build a .py-script and a Jupyter notebook designed to easily help users deploy the model from huggingface on their own data. This is advantageous, since it takes a long time to train a BERT-model for classification tasks. Using our pretrained model from huggingface, will make it easier and much less time-consuming to implement hate speech moderation for various media-sites and firms who wish to combat Danish hate speech on their online platforms. To improve usability, we will make the model compatible with both a _tensorflow_- and _pytorch_ framework
 
 In summary, the project is comprised of the following steps:
-1. Train and test an Ælæktra-model on the official OffensEval2020-dataset
-2. Machine translate English hate-speech-data to Danish and use it to expand the Danish dataset.
-3. Train an Ælæktra-model on the expanded dataset and test it on the OffensEval2020 testing-data
-4. Upload the best model to huggingface.co
-5. Create a Jupyter notebook and .py-script designed to help users deploy the model on their own data.
+1. Train and test a Nordic Bert-model on the official OffensEval2020-dataset
+2. Upload the trained model to huggingface.co
+3. Create a Jupyter notebook and .py-script designed to help users deploy the model on their own data.
 
+<!-- CONTRIBUTION -->
+## Contribution
+This project is created in collaboration between [Gustav Aarup Lauridsen](https://github.com/Guscode) and [Johan Kresten Horsmans](https://github.com/JohanHorsmans). Both have contributed equally to every stage of this project from initial conception and implementation, through the production of the final output and structuring of the repository. (50/50%)
 
 <!-- METHODS -->
 ## Methods
 
 __NOTE: Some parts of the following section is repeated from [_assignment 5_](https://github.com/JohanHorsmans/cds-language-exam-2021/tree/main/assignment_5)__
 
-We have chosen the OffensEval2020 dataset containing 3000+ Danish comments from Ekstra Bladet and Reddit, labeled with a binary coding scheme indicating offensiveness (link: https://figshare.com/articles/dataset/Danish_Hate_Speech_Abusive_Language_data/12220805).
+For model training and testing, we are using the OffensEval2020 dataset containing 3000+ Danish comments from Ekstra Bladet and Reddit, labeled with a binary coding scheme indicating offensiveness (link: https://figshare.com/articles/dataset/Danish_Hate_Speech_Abusive_Language_data/12220805).
 
 OffensEval2020 was a competition where researchers and data scientists from all over the world competed to create the best classification models for various languages (including Danish).
 
 The best team in the Danish task achieved a macro F1-score of 0.8119 and the worst team achieved a score of 0.4913. For the full paper, see: [_OffensEval2020_](https://arxiv.org/pdf/2006.07235.pdf)
 
-We wanted to create a text classifier that could classify offensive comments in Danish and compare our macro F1-score with the results from the OffensEval2020 competition:
+To make our model-performance comparable to the current state-of-the-art presented in OffensEval2020, we utilized macro F1-score as our evaluation metric:
 
 The F1-score is a metric devised to fuse the relation between model precision and recall into a unified score. The metric is defined as taking the harmonic mean of precision and recall. The reason for using the harmonic mean, rather than the arithmetic mean, is that the harmonic mean of a recall-score of 0 and a precision-score of 100 would result in an F1-score of 0, rather than 50. This is advantageous, since it means that a model cannot achieve a high F1-score by having a high recall or precision by itself. The macro-averaging procedure of the macro F1-score involves calculating the arithmetic mean of the F1-score for each class.
 
-For our modeling, we have chosen to use the Ælæktra-architecture. The reason behind using this model is that it, across a large range of tasks, has proven itself to be a new gold-standard for Danish NLP-tasks. Furthermore, it requires fewer computational resources to train compared to similar model-architectures.
+For our modeling, we have chosen to use the Nordic BERT-architecture. The reason behind using Nordic BERT is that it has been deployed with great results in the litterature for a large range of similar classificaion tasks. Furthermore, the winning team in the OffensEval competition for the Danish task also used a Nordic BERT framework.  
 
-We trained the the Ælæktra model for x-epochs with the following hyperparameters:
-*
-*
-*
-*
-
-For the machine translation, we utilized [_EasyNMT_](https://github.com/UKPLab/EasyNMT) with the _opus-mt_-model.
+We trained the the BERT model for 10-epochs with the following hyperparameters:
+* Learning rate: 1e-5,
+* Batch size: 16
+* Max sequence length: 128
 
 We ran- and developed the code on [_Google Colaboratory_](https://colab.research.google.com/?utm_source=scs-index).
 
-Our uploaded model can be found here, on huggingface.co: ____
+Our uploaded model can be found here, on huggingface.co: https://huggingface.co/Guscode/DKbert-hatespeech-detection
+
 
 <!-- HOW TO RUN -->
 ## How to run
 
 __NOTICE:__ To run the assignment, you need to have configured and activated your virtual environment. See the main [README](https://github.com/JohanHorsmans/cds-language-exam-2021/blob/main/README.md) for a guide on how to do this.
 
-Go through the following steps to run the self-assigned project:
+To evaluate the model, you can either refer to the _dk_hate_detect.py_-script or the _dk_hate_detect.ipynb_-notebook. Both contain the same information.
+
+To run the script go through the following steps:
 ```bash
 cd {root directory (i.e. cds-language-exam-2021)}
 cd self_assigned
-python3 HateClass.py
+python3 dk_hate_detect.py
 ```
+
+Go through the following steps to run the notebook:
+
+Navigate to the "self_assigned"-folder.
+Open the "dk_hate_detect.ipynb"-file.
+Make sure the kernel is set to _lang_venv_.
+You can do this by pressing "kernel" -> "change kernel" -> "lang_venv".
+
 <!-- REPOSITORY STRUCTURE AND CONTENTS -->
 ## Repository structure and contents
 
