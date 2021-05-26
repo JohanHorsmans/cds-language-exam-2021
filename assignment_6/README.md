@@ -122,8 +122,8 @@ This repository contains the following folder:
 Furthermore, it holds the following files:
 |File|Description|
 |:--------|:-----------|
-```GoT_lr.py``` | The python script for the logistic regression model in this assignment
-```GoT_dl.py``` | The python script for the deep learning model in this assignment
+```GoT_lr.py``` | The python script for the logistic regression model in this assignment.
+```GoT_dl.py``` | The python script for the deep learning model in this assignment.
 ```README.md``` | The README file that you are currently reading.
 
 <!-- DISCUSSION OF RESULTS -->
